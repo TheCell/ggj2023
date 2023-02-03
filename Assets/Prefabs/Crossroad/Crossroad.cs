@@ -11,11 +11,11 @@ public class Crossroad : MonoBehaviour
     {
         foreach (GameObject crossroad in connectedCrossroads)
         {
-            crossroad.GetComponent<Crossroad>().ensureConnectionBothWays(this.gameObject);
+            crossroad.GetComponent<Crossroad>().EnsureConnectionBothWays(this.gameObject);
         }
     }
 
-    public void ensureConnectionBothWays(GameObject otherCrossroad)
+    public void EnsureConnectionBothWays(GameObject otherCrossroad)
     {
         if(!connectedCrossroads.Contains(otherCrossroad))
         {
