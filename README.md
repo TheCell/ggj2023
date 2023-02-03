@@ -1,2 +1,2 @@
-# ggj2023
+# Overgrowth
 Global Game Jam 2023 Project
