@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb2fea6a74fef4fadf75abe24a2ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossroadScriptableObject: {fileID: 11400000, guid: 1b5e7ac7b43ae21449c6f2e5ec34914d, type: 2}
   connectedCrossroads: []
   adjacentBuildings: []
   startsWithTree: 0

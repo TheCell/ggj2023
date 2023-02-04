@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class Crossroad : MonoBehaviour
 {
+    [SerializeField] private CrossroadScriptableObject crossroadScriptableObject;
     [SerializeField] private List<GameObject> connectedCrossroads = new List<GameObject>();
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
     [SerializeField] private bool startsWithTree;
@@ -12,13 +13,16 @@ public class Crossroad : MonoBehaviour
     private GameObject treeGameObject;
     private List<GameObject> rootGameObjects = new List<GameObject>();
     private int treePrepStatus = 0;
+
     private int newBuildTreshhold;
+    private GameObject treePrefab;
+    private GameObject rootPrefab;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        newBuildTreshhold = transform.parent.gameObject.GetComponent<CrossroadConstants>().crossroadNewBuildTreshhold;
+        ApplyConfig(crossroadScriptableObject);
 
         foreach (GameObject crossroad in connectedCrossroads)
         {
@@ -78,7 +82,6 @@ public class Crossroad : MonoBehaviour
 
     private void PlantTree()
     {
-        GameObject treePrefab = transform.parent.gameObject.GetComponent<CrossroadConstants>().treePrefab;
         treeGameObject = Instantiate(treePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
         treeGameObject.transform.parent = this.transform;
 
@@ -113,7 +116,7 @@ public class Crossroad : MonoBehaviour
     private void RedrawEverything()
     {
         RedrawAllAdjacentBuildings();
-        transform.parent.GetComponent<CrossroadConstants>().RedrawAllRoots();
+        RedrawAllRoots();
     }
 
     private void RedrawAllAdjacentBuildings()
@@ -121,6 +124,14 @@ public class Crossroad : MonoBehaviour
         foreach (GameObject building in adjacentBuildings)
         {
             building.GetComponent<Building>().RedrawBuilding();
+        }
+    }
+
+    private void RedrawAllRoots()
+    {
+        foreach (GameObject crossroad in GameObject.FindGameObjectsWithTag("Crossroad"))
+        {
+            crossroad.GetComponent<Crossroad>().RedrawRoots();
         }
     }
 
@@ -158,7 +169,6 @@ public class Crossroad : MonoBehaviour
             {
                 if (crossroad.GetComponent<Crossroad>().HasTree())
                 {
-                    GameObject rootPrefab = transform.parent.gameObject.GetComponent<CrossroadConstants>().rootPrefab;
                     GameObject rootGameObject = Instantiate(rootPrefab, new Vector3(0, 0, 0), new Quaternion());
                     rootGameObject.GetComponent<Roots>().DrawRoot(transform.GetChild(0), crossroad.transform.GetChild(0));
                     rootGameObject.transform.parent = this.transform;
@@ -166,5 +176,11 @@ public class Crossroad : MonoBehaviour
                 }
             }
         }
+    }
+    public void ApplyConfig(CrossroadScriptableObject crossroadConfig)
+    {
+        this.newBuildTreshhold = crossroadConfig.NewBuildTreshhold;
+        this.treePrefab = crossroadConfig.TreePrefab;
+        this.rootPrefab = crossroadConfig.RootPrefab;
     }
 }

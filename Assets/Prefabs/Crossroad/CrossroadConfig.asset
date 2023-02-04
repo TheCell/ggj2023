@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1712338b293af2e4a9ef43f582f9c3a4, type: 3}
+  m_Name: CrossroadConfig
+  m_EditorClassIdentifier: 
+  TreePrefab: {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
+  RootPrefab: {fileID: 9127532440645180008, guid: beeeb9e64bac5e147ac5453b93ee89f1, type: 3}
+  NewBuildTreshhold: 5
