@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9119491500634692605}
   - component: {fileID: 3591970221725001045}
   - component: {fileID: 2383212158326603890}
+  - component: {fileID: 2118784186416048808}
   m_Layer: 0
   m_Name: EnemyChainsawperson
   m_TagString: Untagged
@@ -144,3 +145,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2118784186416048808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173904997670909451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54161efd7038f1149b786e5ea46c657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScriptableObject: {fileID: 11400000, guid: 55fcba4cfb182a9428adb5fdb321b45e, type: 2}
