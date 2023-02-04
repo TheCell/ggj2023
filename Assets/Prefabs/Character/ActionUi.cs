@@ -20,23 +20,9 @@ public class ActionUi : MonoBehaviour
         originalSprite = this.GetComponent<SpriteRenderer>().sprite;
     }
 
-    public void Select()
+    public void Select(GameObject tree)
     {
-        switch (type)
-        {
-            case ActionUiType.Top:
-                Debug.Log("top");
-                break;
-            case ActionUiType.Right:
-                Debug.Log("right");
-                break;
-            case ActionUiType.Bottom:
-                Debug.Log("bottom");
-                break;
-            case ActionUiType.Left:
-                Debug.Log("left");
-                break;
-        }
+        tree.GetComponent<Crossroad>().ContextMenuAction(type);
         Passivate();
     }
 

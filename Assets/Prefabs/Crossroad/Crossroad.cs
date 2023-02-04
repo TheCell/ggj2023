@@ -59,7 +59,7 @@ public class Crossroad : MonoBehaviour
         if (CheckIfTreePreparable())
         {
             treePrepStatus++;
-            if(treePrepStatus >= newBuildTreshhold) 
+            if (treePrepStatus >= newBuildTreshhold)
             {
                 PlantTree();
                 treePrepStatus = 0;
@@ -100,7 +100,7 @@ public class Crossroad : MonoBehaviour
     private IEnumerator CheckIfGameLost()
     {
         yield return new WaitForEndOfFrame();
-        if(GameObject.FindGameObjectsWithTag("Tree").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Tree").Length == 0)
         {
             LoseGame();
         }
@@ -135,7 +135,7 @@ public class Crossroad : MonoBehaviour
         }
     }
 
-    public bool HasTree() 
+    public bool HasTree()
     {
         return treeGameObject != null;
     }
@@ -157,7 +157,7 @@ public class Crossroad : MonoBehaviour
 
     public void RedrawRoots()
     {
-        foreach(GameObject root in rootGameObjects)
+        foreach (GameObject root in rootGameObjects)
         {
             Destroy(root);
         }
@@ -182,5 +182,25 @@ public class Crossroad : MonoBehaviour
         this.newBuildTreshhold = crossroadConfig.NewBuildTreshhold;
         this.treePrefab = crossroadConfig.TreePrefab;
         this.rootPrefab = crossroadConfig.RootPrefab;
+    }
+
+    public void ContextMenuAction(ActionUiType type)
+    {
+        // TODO: implement
+        switch (type)
+        {
+            case ActionUiType.Top:
+                Debug.Log("top");
+                break;
+            case ActionUiType.Right:
+                Debug.Log("right");
+                break;
+            case ActionUiType.Bottom:
+                Debug.Log("bottom");
+                break;
+            case ActionUiType.Left:
+                Debug.Log("left");
+                break;
+        }
     }
 }

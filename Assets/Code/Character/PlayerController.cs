@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private GameObject activeUiElement;
     private Coroutine openingCoroutine = null;
+    private static GameObject crossRoadForActionsMenu;
     private static GameObject UI;
 
     private void Start()
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
             if (activeUiElement)
             {
-                activeUiElement.GetComponent<ActionUi>().Select();
+                activeUiElement.GetComponent<ActionUi>().Select(crossRoadForActionsMenu);
                 activeUiElement = null;
             }
         }
@@ -80,10 +81,15 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator MenuState()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(0);
 
-        UI.SetActive(true);
-        UI.transform.position = (transform.position - new Vector3(-1f, 1f, -1f));
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, crossroadLayer))
+        {
+            crossRoadForActionsMenu = hit.collider.gameObject;
+            UI.SetActive(true);
+            UI.transform.position = (transform.position - new Vector3(-1f, 1f, -1f));
+        }
     }
 
     private void HandleMenuOpen()
