@@ -4,6 +4,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private NavigationAgent agent;
     private Attack attack;
+    [SerializeField] private SOAudioCollection enemyAudio;
 
     void Start()
     {
