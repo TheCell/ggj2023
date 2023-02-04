@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: EnemyBulldozerAudio
   m_EditorClassIdentifier: 
   spawnAudio:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 5a0bb4a03b5a0444eaec23588c9c26a3, type: 3}
     volume: 1
   idleAudio:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: d011acd44347b9242838f4e61a02fa3b, type: 3}
     volume: 1
   attackAudio:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f11324096a8cef040b8bbe4c80995b35, type: 3}
     volume: 1
   despawnAudio:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e969bb104b4cdb046affcaa6d8f99583, type: 3}
     volume: 1
