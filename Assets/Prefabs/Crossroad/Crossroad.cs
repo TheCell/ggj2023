@@ -8,6 +8,7 @@ public class Crossroad : MonoBehaviour
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
 
     private GameObject treeGameObject;
+    private List<GameObject> rootGameObjects = new List<GameObject>();
     private int treePrepStatus = 0;
     private int newBuildTreshhold;
 
@@ -28,7 +29,6 @@ public class Crossroad : MonoBehaviour
 
         // Debug
         PlantTree();
-        RedrawRoots();
     }
 
     public void EnsureStreetConnectionBothWays(GameObject otherGameobject)
@@ -79,6 +79,7 @@ public class Crossroad : MonoBehaviour
         treeGameObject.transform.parent = this.transform;
 
         RedrawAllAdjacentBuildings();
+        RedrawRoots();
     }
 
     public void DestroyTree()
@@ -86,6 +87,7 @@ public class Crossroad : MonoBehaviour
         Destroy(treeGameObject);
         treeGameObject = null;
         RedrawAllAdjacentBuildings();
+        RedrawRoots();
     }
 
     private void RedrawAllAdjacentBuildings()
@@ -103,6 +105,8 @@ public class Crossroad : MonoBehaviour
 
     private void RedrawRoots()
     {
+        rootGameObjects = new List<GameObject>();
+
         if (HasTree())
         {
             foreach (GameObject crossroad in connectedCrossroads)
@@ -113,6 +117,7 @@ public class Crossroad : MonoBehaviour
                     GameObject rootGameObject = Instantiate(rootPrefab, new Vector3(0, 0, 0), new Quaternion());
                     rootGameObject.GetComponent<Roots>().DrawRoot(transform.GetChild(0), crossroad.transform.GetChild(0));
                     rootGameObject.transform.parent = this.transform;
+                    rootGameObjects.Add(rootGameObject);
                 }
             }
         }

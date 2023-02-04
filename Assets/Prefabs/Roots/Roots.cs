@@ -10,16 +10,4 @@ public class Roots : MonoBehaviour
         Quaternion rotation = Quaternion.FromToRotation(Vector3.right, endPoint.position - startPoint.position);
         this.transform.rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, rotation.eulerAngles.z);
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
