@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84114847649c794ea86240853bd353b, type: 3}
-  m_Name: TreeHealth
+  m_Script: {fileID: 11500000, guid: 0308e430895880546839266f8eb7a257, type: 3}
+  m_Name: CrossroadTapAction
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  StartingHealth: 50
-  TickDamageRate: 10
-  TickDamageAmount: 1
+  healAmount: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5236265711926305132}
   - component: {fileID: 9177549620277496427}
   - component: {fileID: 5628349841927338139}
+  - component: {fileID: -4734505964368791734}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Tree
@@ -70,9 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e224dda5e656d834f8c1f12c51e65ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  startingHealth: 50
-  attack: 0
 --- !u!114 &9177549620277496427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +97,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackScriptableObject: {fileID: 11400000, guid: 25b00899550007f418480ffd6366a59c, type: 2}
+--- !u!114 &-4734505964368791734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330080792925558488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8958782b92f6f884aa2bcad976d4c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tapActionConfig: {fileID: 11400000, guid: df03f328a99bc1f47bca371f4c8b0818, type: 2}
 --- !u!1001 &1322505523415407435
 PrefabInstance:
   m_ObjectHideFlags: 0
