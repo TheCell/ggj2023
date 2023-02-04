@@ -20,6 +20,11 @@ public class Tree : MonoBehaviour
         currentHealth = startingHealth;
     }
 
+    public void TickDamage(int damage)
+    {
+        TakeDamage(damage);
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

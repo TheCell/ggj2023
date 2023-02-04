@@ -8,10 +8,15 @@ public class Crossroad : MonoBehaviour
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
 
     private GameObject treeGameObject;
+    private int treePrepStatus = 0;
+    private int newBuildTreshhold;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        newBuildTreshhold = transform.parent.gameObject.GetComponent<CrossroadConstants>().crossroadNewBuildTreshhold;
+
         foreach (GameObject crossroad in connectedCrossroads)
         {
             crossroad.GetComponent<Crossroad>().EnsureStreetConnectionBothWays(this.gameObject);
@@ -38,6 +43,32 @@ public class Crossroad : MonoBehaviour
         {
             adjacentBuildings.Add(otherGameobject);
         }
+    }
+
+    private void PrepareTree()
+    {
+        if (!HasTree() && CheckIfTreePreparable())
+        {
+            treePrepStatus++;
+            if(treePrepStatus >= newBuildTreshhold) 
+            {
+                PlantTree();
+                treePrepStatus = 0;
+            }
+        }
+    }
+
+    private bool CheckIfTreePreparable()
+    {
+        foreach (GameObject crossroad in connectedCrossroads)
+        {
+            if (crossroad.GetComponent<Crossroad>().HasTree())
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void PlantTree()
@@ -67,5 +98,16 @@ public class Crossroad : MonoBehaviour
     public bool HasTree() 
     {
         return treeGameObject != null;
+    }
+
+    private void RedrawRoots()
+    {
+        foreach (GameObject crossroad in connectedCrossroads)
+        {
+            if (crossroad.GetComponent<Crossroad>().HasTree())
+            {
+                return true;
+            }
+        }
     }
 }
