@@ -545,7 +545,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crossroad Parent (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5199014523731589167, guid: 0692f3785e9bfd74495400069ef850be, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
