@@ -17,17 +17,18 @@ public class DebugSetPoint : MonoBehaviour
         navigationAgent.SetTarget(debugTarget);
     }
 
-    private void Update()
-    {
-        if (Time.time + 1f > lastUpdateTimestamp)
-        {
-            lastUpdateTimestamp = Time.time;
-            UpdateTarget();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Time.time + 3f > lastUpdateTimestamp)
+    //    {
+    //        lastUpdateTimestamp = Time.time;
+    //        UpdateTarget();
+    //    }
+    //}
 
-    private void UpdateTarget()
-    {
-        navigationAgent.SetTarget(debugTarget);
-    }
+    //private void UpdateTarget()
+    //{
+    //    Debug.Log("Overwriting Target manually");
+    //    navigationAgent.SetTarget(debugTarget);
+    //}
 }

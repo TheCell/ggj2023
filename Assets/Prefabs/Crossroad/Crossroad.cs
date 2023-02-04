@@ -50,9 +50,9 @@ public class Crossroad : MonoBehaviour
         }
     }
 
-    private void PrepareTree()
+    public void PrepareTree()
     {
-        if (!HasTree() && CheckIfTreePreparable())
+        if (CheckIfTreePreparable())
         {
             treePrepStatus++;
             if(treePrepStatus >= newBuildTreshhold) 

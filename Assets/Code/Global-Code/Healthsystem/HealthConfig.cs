@@ -5,4 +5,6 @@ public class HealthScriptableObject : ScriptableObject
 {
     public int MaxHealth;
     public int StartingHealth;
+    public int TickDamageRate;
+    public int TickDamageAmount;
 }

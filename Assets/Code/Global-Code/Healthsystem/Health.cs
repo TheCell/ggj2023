@@ -7,6 +7,11 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] private HealthScriptableObject healthScriptableObject;
     private int maxHealth;
     private int currentHealth;
+    private int startingHealth;
+    private int tickDamageRate;
+    private int tickDamageAmount;
+
+    private int fixedUpdateCounter = 0;
 
     void Start()
     {
@@ -15,7 +20,14 @@ public class Health : MonoBehaviour, IHealth
 
     public void Die()
     {
-        Destroy(gameObject);
+        if (GetComponent<Tree>())
+        {
+            this.transform.parent.GetComponent<Crossroad>().DestroyTree();
+        } 
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Heal(int hpToheal)
@@ -25,6 +37,27 @@ public class Health : MonoBehaviour, IHealth
         {
             currentHealth = maxHealth;
         }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (tickDamageAmount + tickDamageRate > 0 && fixedUpdateCounter >= tickDamageRate)
+        {
+            this.GetComponent<Health>().TickDamage();
+            this.GetComponent<Tree>().SetSize();
+
+            fixedUpdateCounter = 0;
+        }
+        else
+        {
+            fixedUpdateCounter++;
+        }
+    }
+
+    public void TickDamage()
+    {
+        TakeDamage(tickDamageAmount);
     }
 
     public void TakeDamage(int damage)
@@ -40,5 +73,11 @@ public class Health : MonoBehaviour, IHealth
     {
         this.maxHealth = healthConfig.MaxHealth;
         this.currentHealth = healthConfig.StartingHealth;
+        this.startingHealth = healthConfig.StartingHealth;
+        this.tickDamageRate = healthConfig.TickDamageRate;
+        this.tickDamageAmount = healthConfig.TickDamageAmount;
     }
+
+    public int getCurrentHealth() { return currentHealth; }
+    public int getStartingHealth() { return startingHealth; }
 }
