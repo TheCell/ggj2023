@@ -1,9 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour, IHealth
 {
+    public UnityEvent Died = new();
+    public UnityEvent TreeHealthChanged = new();
+
+    [SerializeField] bool ebnableDebugLog;
     [SerializeField] private HealthScriptableObject healthScriptableObject;
     private int maxHealth;
     private int currentHealth;
@@ -12,26 +15,19 @@ public class Health : MonoBehaviour, IHealth
     private int tickDamageAmount;
     private int tickStableHealth;
 
-
     private float lastTickTime;
-
 
     void Start()
     {
         ApplyConfig(healthScriptableObject);
         tickDamageRate = tickDamageRate * 0.01f;
+        TreeHealthChanged.Invoke();
     }
 
     public void Die()
     {
-        if (GetComponent<Tree>())
-        {
-            this.transform.parent.GetComponent<Crossroad>().DestroyTree();
-        } 
-        else
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
+        Died.Invoke();
     }
 
     public void Heal(int hpToheal)
@@ -42,10 +38,9 @@ public class Health : MonoBehaviour, IHealth
             currentHealth = maxHealth;
         }
 
-        TreeCheck();
+        TreeHealthChanged.Invoke();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (tickDamageRate > 0 && Time.time > lastTickTime + tickDamageRate)
@@ -67,41 +62,22 @@ public class Health : MonoBehaviour, IHealth
         if (currentHealth >= tickStableHealth + tickFloor)
         {
             TakeDamage(tickDamageAmount);
-        } 
- //       else if (currentHealth >= tickStableHealth)
- //       {
- //           SetHealth(tickStableHealth);
- //       }
+        }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if (ebnableDebugLog)
+        {
+            Debug.Log($"Took damge, new healt: {currentHealth}");
+        }
         if (currentHealth < 0)
         {
             Die();
         }
 
-        TreeCheck();
-    }
-
-    private void SetHealth(int health)
-    {
-        currentHealth = health;
-        if (currentHealth < 0)
-        {
-            Die();
-        }
-
-        TreeCheck();
-    }
-
-    private void TreeCheck()
-    {
-        if (GetComponent<Tree>())
-        {
-            this.GetComponent<Tree>().SetSize();
-        }
+        TreeHealthChanged.Invoke();
     }
 
     public void ApplyConfig(HealthScriptableObject healthConfig)

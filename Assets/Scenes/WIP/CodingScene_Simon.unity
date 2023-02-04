@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 67ec2c09742600e47966ff054ebce692, type: 2}
+--- !u!1001 &89220064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4761113405994276454, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: ebnableDebugLog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538514, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_Name
+      value: EnemyBulldozer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538514, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.19044
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
 --- !u!1 &174972153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4761113405994276454, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: ebnableDebugLog
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6905093571871538514, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
       propertyPath: m_Name
       value: EnemyBulldozer (1)
@@ -1410,6 +1483,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463025688}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1484450979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4761113405994276454, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: ebnableDebugLog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538514, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_Name
+      value: EnemyBulldozer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538514, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.19044
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905093571871538526, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 214bbd8ec26e27941bfbe2727cba1323, type: 3}
 --- !u!1 &1644226374
 GameObject:
   m_ObjectHideFlags: 0

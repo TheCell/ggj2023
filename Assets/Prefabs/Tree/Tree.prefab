@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76753761664019561}
-  - component: {fileID: -6158239869309931965}
   - component: {fileID: -5236265711926305132}
+  - component: {fileID: 66221654918037653}
   - component: {fileID: 9177549620277496427}
   - component: {fileID: 5628349841927338139}
   - component: {fileID: -4734505964368791734}
@@ -38,27 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &-6158239869309931965
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6330080792925558488}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-5236265711926305132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +50,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e224dda5e656d834f8c1f12c51e65ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &66221654918037653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330080792925558488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82f7498ef0f0e04681ed5081765a18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 3
 --- !u!114 &9177549620277496427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54161efd7038f1149b786e5ea46c657b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Died:
+    m_PersistentCalls:
+      m_Calls: []
   healthScriptableObject: {fileID: 11400000, guid: 426fa41f507ebb44b8db25feffbde588, type: 2}
 --- !u!114 &5628349841927338139
 MonoBehaviour:
@@ -96,6 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baee1fed50bfd1b46ac24ae27cc41c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
   AttackScriptableObject: {fileID: 11400000, guid: 25b00899550007f418480ffd6366a59c, type: 2}
 --- !u!114 &-4734505964368791734
 MonoBehaviour:

@@ -7,13 +7,4 @@ public class Tree : MonoBehaviour
         float scalingFactor = 1f * transform.GetComponent<Health>().getCurrentHealth() / transform.GetComponent<Health>().getStartingHealth();
         transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            Debug.Log(other.name);
-            //other.GetComponent<Enemy>().TakeDamage(attack);
-        }
-    }
 }
