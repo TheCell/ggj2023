@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     private Coroutine openingCoroutine = null;
     private static GameObject UI;
 
-
     private void Start()
     {
         crossroadLayer = LayerMask.GetMask("Crossroad");
@@ -49,12 +48,11 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, crossroadLayer))
         {
-            TapAction tree = hit.transform.GetComponent<TapAction>();
-            tree.tapAction();
-        }
-        else
-        {
-            Debug.Log("Did not Hit");
+            if (ctx.started)
+            {
+                TapAction tree = hit.transform.GetComponent<TapAction>();
+                tree.tapAction();
+            }
         }
     }
 
