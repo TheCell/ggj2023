@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +19,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 inputFittedToCamera = Quaternion.AngleAxis(-30, Vector3.right) * new Vector3(movementInput.x, 0, movementInput.y);
+        //Vector3 inputFittedToCamera = Quaternion.AngleAxis(-30, Vector3.right) * new Vector3(movementInput.x, 0, movementInput.y);
+        Vector3 inputFittedToCamera = new Vector3(movementInput.x, movementInput.y, 0);
+
 
         transform.Translate(inputFittedToCamera * speed * Time.deltaTime);
 
@@ -26,12 +30,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext ctx)
     {
-        
+
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* 1000, Color.white);
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, crossroadLayer))
         {
-            Debug.Log("Did Hit");
+            TapAction tree = hit.transform.GetComponent<TapAction>();
+            tree.tapAction();
         }
         else
         {
