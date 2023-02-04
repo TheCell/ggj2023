@@ -8,11 +8,14 @@ public class Building : MonoBehaviour
 
     private Renderer buildingRenderer;
 
+    private void Awake()
+    {
+        buildingRenderer = GetComponent<Renderer>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        buildingRenderer = GetComponent<Renderer>();
-
         foreach (GameObject crossroad in surroundingCrossroads)
         {
             crossroad.GetComponent<Crossroad>().EnsureBuildingConnectionBothWays(this.gameObject);
@@ -32,6 +35,10 @@ public class Building : MonoBehaviour
         if (CheckOvergrowthStatus())
         {
             buildingRenderer.material.color = Color.green;
+            if(transform.GetComponent<Monument>())
+            {
+                transform.GetComponent<Monument>().WinGame();
+            }
         }
         else
         {
