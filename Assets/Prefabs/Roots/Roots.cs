@@ -14,8 +14,7 @@ public class Roots : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // debug
-        DrawRoot(GameObject.FindGameObjectsWithTag("Crossroad")[1].transform, GameObject.FindGameObjectsWithTag("Crossroad")[4].transform);
+
     }
 
     // Update is called once per frame

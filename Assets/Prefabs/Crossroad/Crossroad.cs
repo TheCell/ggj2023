@@ -28,6 +28,7 @@ public class Crossroad : MonoBehaviour
 
         // Debug
         PlantTree();
+        RedrawRoots();
     }
 
     public void EnsureStreetConnectionBothWays(GameObject otherGameobject)
@@ -102,11 +103,17 @@ public class Crossroad : MonoBehaviour
 
     private void RedrawRoots()
     {
-        foreach (GameObject crossroad in connectedCrossroads)
+        if (HasTree())
         {
-            if (crossroad.GetComponent<Crossroad>().HasTree())
+            foreach (GameObject crossroad in connectedCrossroads)
             {
-                //return true;
+                if (crossroad.GetComponent<Crossroad>().HasTree())
+                {
+                    GameObject rootPrefab = transform.parent.gameObject.GetComponent<CrossroadConstants>().rootPrefab;
+                    GameObject rootGameObject = Instantiate(rootPrefab, new Vector3(0, 0, 0), new Quaternion());
+                    rootGameObject.GetComponent<Roots>().DrawRoot(transform.GetChild(0), crossroad.transform.GetChild(0));
+                    rootGameObject.transform.parent = this.transform;
+                }
             }
         }
     }

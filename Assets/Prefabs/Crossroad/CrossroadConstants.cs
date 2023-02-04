@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrossroadConstants : MonoBehaviour
 {
     public GameObject treePrefab;
+    public GameObject rootPrefab;
     public int treeTickDamageRate;
     public int treeTickDamageAmount;
     public int crossroadNewBuildTreshhold;
