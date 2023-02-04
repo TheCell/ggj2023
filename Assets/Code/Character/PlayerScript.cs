@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private Color mainColor;
-    private Renderer playerRenderer;
-    // Start is called before the first frame update
+    [SerializeField] private Sprite player1;
+    [SerializeField] private Sprite player2;
+    [SerializeField] private Sprite player3;
+    [SerializeField] private Sprite player4;
+
+    private static int playerCount = 0;
+
     void Start()
     {
-        mainColor = new Color(
-      Random.Range(0f, 1f),
-      Random.Range(0f, 1f),
-      Random.Range(0f, 1f)
-  );
-        playerRenderer = GetComponent<Renderer>();
-        playerRenderer.material.color = mainColor;
-    }
+        var renderer = this.GetComponent<SpriteRenderer>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        switch (playerCount)
+        {
+            case 0:
+                renderer.sprite = player1;
+                break;
+            case 1:
+                renderer.sprite = player2;
+                break;
+            case 2:
+                renderer.sprite = player3;
+                break;
+            case 3:
+                renderer.sprite = player4;
+                break;
+            default:
+                throw new System.Exception("TOO MANY PLAYERS");
+        }
+
+        playerCount++;
     }
 }
