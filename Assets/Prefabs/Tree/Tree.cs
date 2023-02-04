@@ -16,8 +16,6 @@ public class Tree : MonoBehaviour
     void Start()
     {
         treeRenderer = GetComponent<Renderer>();
-        // remove this once we have actual models & textures
-        treeRenderer.material.color = Color.green;
 
         currentHealth = startingHealth;
     }
@@ -28,7 +26,7 @@ public class Tree : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            this.transform.parent.GetComponent<Crossroad>().DestroyTree();
         }
 
         SetSize();

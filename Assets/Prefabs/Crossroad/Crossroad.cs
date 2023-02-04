@@ -45,6 +45,23 @@ public class Crossroad : MonoBehaviour
         GameObject treePrefab = transform.parent.gameObject.GetComponent<CrossroadConstants>().treePrefab;
         treeGameObject = Instantiate(treePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
         treeGameObject.transform.parent = this.transform;
+
+        RedrawAllAdjacentBuildings();
+    }
+
+    public void DestroyTree()
+    {
+        Destroy(treeGameObject);
+        treeGameObject = null;
+        RedrawAllAdjacentBuildings();
+    }
+
+    private void RedrawAllAdjacentBuildings()
+    {
+        foreach (GameObject building in adjacentBuildings)
+        {
+            building.GetComponent<Building>().RedrawBuilding();
+        }
     }
 
     public bool HasTree() 
