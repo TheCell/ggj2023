@@ -5,7 +5,7 @@ public class DebugSetPoint : MonoBehaviour
 {
     [SerializeField] private Transform debugTarget;
     private NavigationAgent navigationAgent;
-    private float lastUpdateTimestamp = 0f;
+    //private float lastUpdateTimestamp = 0f;
 
     void OnEnable()
     {
