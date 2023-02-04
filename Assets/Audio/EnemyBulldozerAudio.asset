@@ -12,15 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e7097746992447926b5029d9ce1b3, type: 3}
   m_Name: EnemyBulldozerAudio
   m_EditorClassIdentifier: 
-  spawnAudio:
-    audioClip: {fileID: 8300000, guid: 5a0bb4a03b5a0444eaec23588c9c26a3, type: 3}
-    volume: 1
-  idleAudio:
-    audioClip: {fileID: 8300000, guid: f8de5a6c81a79e141baf125c2ce6d77c, type: 3}
-    volume: 1
-  attackAudio:
-    audioClip: {fileID: 8300000, guid: f11324096a8cef040b8bbe4c80995b35, type: 3}
-    volume: 1
-  despawnAudio:
-    audioClip: {fileID: 8300000, guid: cb24ac52c53669647b06485047855d7e, type: 3}
-    volume: 1
+  spawnAudio2: {fileID: 8300000, guid: 5a0bb4a03b5a0444eaec23588c9c26a3, type: 3}
+  idleAudio2: {fileID: 8300000, guid: f8de5a6c81a79e141baf125c2ce6d77c, type: 3}
+  attackAudio2: {fileID: 8300000, guid: f11324096a8cef040b8bbe4c80995b35, type: 3}
+  despawnAudio2: {fileID: 8300000, guid: cb24ac52c53669647b06485047855d7e, type: 3}
