@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChainsawPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 8325791894181027032, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
+      propertyPath: enemyAudio
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ffa1e883c1544b438ffbe4461fa3b69, type: 2}
     - target: {fileID: 9119491500634692605, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
       propertyPath: config
       value: 
