@@ -1,12 +1,17 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Attack : MonoBehaviour, IAttack
 {
+    public UnityEvent TargetDestroyed = new();
+
     [SerializeField] private AttackConfig AttackScriptableObject;
     private int AttackDamage;
     private float TimeBetweenAttacks;
-    private Health target;
     private float lastAttackTime;
+    private Health target;
+    private Boolean hasActiveTarget = false;
 
     void Start()
     {
@@ -15,7 +20,7 @@ public class Attack : MonoBehaviour, IAttack
 
     public void Update()
     {
-        if (target == null)
+        if (!hasActiveTarget)
         {
             return;
         }
@@ -35,6 +40,7 @@ public class Attack : MonoBehaviour, IAttack
 
     public void SetTarget(Health target)
     {
+        hasActiveTarget = true;
         lastAttackTime = Time.time;
         this.target = target;
     }
@@ -46,6 +52,17 @@ public class Attack : MonoBehaviour, IAttack
 
     public void AttackTarget()
     {
-        target.TakeDamage(AttackDamage);
+        if (target == null)
+        {
+            Debug.Log("no target left");
+            ResetTarget();
+            hasActiveTarget = false;
+            TargetDestroyed.Invoke();
+            return;
+        }
+        else
+        {
+            target.TakeDamage(AttackDamage);
+        }
     }
 }
