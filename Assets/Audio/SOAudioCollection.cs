@@ -16,4 +16,13 @@ public class SOAudioCollection : ScriptableObject
 
     [SerializeField]
     private SingleAudioClip despawnAudio;
+
+    public SingleAudioClip GetSpawnAudio { get => spawnAudio; }
+
+    public SingleAudioClip GetAttackAudio { get => attackAudio; }
+
+    public SingleAudioClip GetIdleAudio { get => idleAudio; }
+
+    public SingleAudioClip GetDespawnAudio { get => despawnAudio; }
+
 }

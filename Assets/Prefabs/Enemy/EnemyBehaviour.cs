@@ -1,13 +1,17 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayAudioLocalSource))]
 public class EnemyBehaviour : MonoBehaviour
 {
     private NavigationAgent agent;
     private Attack attack;
+
+    private PlayAudioLocalSource playAudio;
     [SerializeField] private SOAudioCollection enemyAudio;
 
     void Start()
     {
+        playAudio = GetComponent<PlayAudioLocalSource>();
         agent = GetComponent<NavigationAgent>();
         if (agent == null)
         {
@@ -23,6 +27,16 @@ public class EnemyBehaviour : MonoBehaviour
         agent.StoppedMoving.AddListener(StoppedMoving);
         attack.TargetDestroyed.AddListener(GetNextTarget);
         GetNextTarget();
+
+        if(enemyAudio != null)
+        {
+            playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
+        }
+
+        else
+        {
+            Debug.LogError("Missing SO with audio information in Enemy Behaviour");
+        }
     }
 
     private void OnDisable()
@@ -59,10 +73,12 @@ public class EnemyBehaviour : MonoBehaviour
         if (Vector3.Distance(target.transform.position, transform.position) <= agent.AgentRange())
         {
             attack.SetTarget(target);
+            playAudio.PlayAudioClip(enemyAudio.GetAttackAudio);
         }
         else
         {
             agent.SetTarget(target.transform);
+            playAudio.PlayAudioClip(enemyAudio.GetIdleAudio);
         }
     }
 
