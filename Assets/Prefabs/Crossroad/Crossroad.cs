@@ -87,9 +87,27 @@ public class Crossroad : MonoBehaviour
 
     public void DestroyTree()
     {
+        float startTime = Time.time;
         Destroy(treeGameObject);
         treeGameObject = null;
         RedrawEverything();
+        StartCoroutine(CheckIfGameLost());
+    }
+
+    private IEnumerator CheckIfGameLost()
+    {
+        yield return new WaitForEndOfFrame();
+        if(GameObject.FindGameObjectsWithTag("Tree").Length == 0)
+        {
+            LoseGame();
+        }
+    }
+
+    private void LoseGame()
+    {
+        Debug.Log("You lost!");
+        GameSceneSwitcher sceneSwitcher = new GameSceneSwitcher();
+        sceneSwitcher.SwitchToStartScene();
     }
 
     private void RedrawEverything()
@@ -132,6 +150,15 @@ public class Crossroad : MonoBehaviour
                     rootGameObjects.Add(rootGameObject);
                 }
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            //if(transform.GetSiblingIndex() % 2 == 0)
+            DestroyTree();
         }
     }
 }
