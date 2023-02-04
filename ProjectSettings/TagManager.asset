@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Crossroad
   - Building
+  - ActionUI
   layers:
   - Default
   - TransparentFX
