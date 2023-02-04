@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Crossroad : MonoBehaviour
 {
@@ -78,16 +79,20 @@ public class Crossroad : MonoBehaviour
         treeGameObject = Instantiate(treePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
         treeGameObject.transform.parent = this.transform;
 
-        RedrawAllAdjacentBuildings();
-        RedrawRoots();
+        RedrawEverything();
     }
 
     public void DestroyTree()
     {
         Destroy(treeGameObject);
         treeGameObject = null;
+        RedrawEverything();
+    }
+
+    private void RedrawEverything()
+    {
         RedrawAllAdjacentBuildings();
-        RedrawRoots();
+        transform.parent.GetComponent<CrossroadConstants>().RedrawAllRoots();
     }
 
     private void RedrawAllAdjacentBuildings()
@@ -103,8 +108,12 @@ public class Crossroad : MonoBehaviour
         return treeGameObject != null;
     }
 
-    private void RedrawRoots()
+    public void RedrawRoots()
     {
+        foreach(GameObject root in rootGameObjects)
+        {
+            Destroy(root);
+        }
         rootGameObjects = new List<GameObject>();
 
         if (HasTree())

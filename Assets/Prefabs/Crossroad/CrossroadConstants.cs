@@ -29,4 +29,12 @@ public class CrossroadConstants : MonoBehaviour
             fixedUpdateCounter++;
         }
     }
+
+    public void RedrawAllRoots()
+    {
+        foreach (GameObject crossroad in GameObject.FindGameObjectsWithTag("Crossroad"))
+        {
+            crossroad.GetComponent<Crossroad>().RedrawRoots();
+        }
+    }
 }
