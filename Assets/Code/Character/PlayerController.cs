@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
     public void onSecondaryHold(InputAction.CallbackContext ctx)
     {
         float value = ctx.ReadValue<float>();
-        if (value == 1 && openingCoroutine == null)
+
+        if (value > .3f && openingCoroutine == null)
         {
             openingCoroutine = StartCoroutine(MenuState());
         }
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator MenuState()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.2f);
 
         UI.SetActive(true);
         UI.transform.position = (transform.position - new Vector3(-1f, 1f, -1f));
