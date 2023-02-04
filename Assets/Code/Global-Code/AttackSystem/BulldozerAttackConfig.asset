@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68783fef885149140b47be3ec704dfb2, type: 3}
-  m_Name: HumanMovement
+  m_Script: {fileID: 11500000, guid: b6c7a150898926949887b37619005967, type: 3}
+  m_Name: BulldozerAttackConfig
   m_EditorClassIdentifier: 
-  Speed: 2
-  AngularSpeed: 170
-  Acceleration: 8
-  StoppingDistance: 2
-  ObstacleAvoidanceRadius: 0.5
+  AttackDamage: 10
+  TimeBetweenAttacks: 3

@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 4173904997670909446}
   - component: {fileID: 4173904997670909445}
   - component: {fileID: 4173904997670909444}
-  - component: {fileID: 9119491500634692605}
   - component: {fileID: 3591970221725001045}
+  - component: {fileID: 9119491500634692605}
+  - component: {fileID: 2606947658014203199}
+  - component: {fileID: 1208927775262724073}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -107,18 +109,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9119491500634692605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4173904997670909451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0a9c9068a1a774482f80c327b0830c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &3591970221725001045
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -141,3 +131,42 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &9119491500634692605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173904997670909451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0a9c9068a1a774482f80c327b0830c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: c254dd79ff79ed74a9d86091fe76bd07, type: 2}
+--- !u!114 &2606947658014203199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173904997670909451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54161efd7038f1149b786e5ea46c657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScriptableObject: {fileID: 11400000, guid: a55807528231c2641b9eec8faabc48f8, type: 2}
+--- !u!114 &1208927775262724073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173904997670909451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baee1fed50bfd1b46ac24ae27cc41c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackScriptableObject: {fileID: 11400000, guid: 69c530d5a2385dc4084caef0853df8e8, type: 2}

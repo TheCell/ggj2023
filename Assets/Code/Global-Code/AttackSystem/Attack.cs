@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour, IAttack
 {
+    [SerializeField] private AttackConfig AttackScriptableObject;
     private int AttackDamage;
     private float TimeBetweenAttacks;
     private Health target;
     private float lastAttackTime;
+
+    void Start()
+    {
+        ApplyConfig(AttackScriptableObject);
+    }
 
     public void Update()
     {
