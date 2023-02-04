@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 76753761664019561}
   - component: {fileID: -6158239869309931965}
   - component: {fileID: -5236265711926305132}
+  - component: {fileID: 9177549620277496427}
+  - component: {fileID: 5628349841927338139}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Tree
@@ -33,7 +35,7 @@ Transform:
   - {fileID: 1571970370818784416}
   - {fileID: 6723647930823497339}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &-6158239869309931965
 SphereCollider:
@@ -71,6 +73,32 @@ MonoBehaviour:
   maxHealth: 100
   startingHealth: 50
   attack: 0
+--- !u!114 &9177549620277496427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330080792925558488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54161efd7038f1149b786e5ea46c657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScriptableObject: {fileID: 11400000, guid: 426fa41f507ebb44b8db25feffbde588, type: 2}
+--- !u!114 &5628349841927338139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330080792925558488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baee1fed50bfd1b46ac24ae27cc41c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackScriptableObject: {fileID: 11400000, guid: 25b00899550007f418480ffd6366a59c, type: 2}
 --- !u!1001 &1322505523415407435
 PrefabInstance:
   m_ObjectHideFlags: 0
