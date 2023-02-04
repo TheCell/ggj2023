@@ -51,16 +51,4 @@ public class TapAction : MonoBehaviour
     {
         healAmount = tapActionConfig.healAmount;
     }
-
-    private float lasttime;
-
-    private void Update()
-    {
-        if (Time.time > lasttime + 2)
-        {
-            lasttime = Time.time;
-            //if(transform.GetSiblingIndex() % 2 == 0)
-            GameObject.FindGameObjectsWithTag("Crossroad")[5].GetComponent<TapAction>().tapAction();
-        }
-    }
 }
