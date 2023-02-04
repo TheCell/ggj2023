@@ -34,7 +34,7 @@ Transform:
   - {fileID: 3899709231788651579}
   - {fileID: 3899709231793841319}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5199014523731589167
 MonoBehaviour:
@@ -49,8 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treePrefab: {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
-  treeTickDamageRate: 10
-  treeTickDamageAmount: 1
+  rootPrefab: {fileID: 9127532440645180008, guid: beeeb9e64bac5e147ac5453b93ee89f1, type: 3}
   crossroadNewBuildTreshhold: 0
 --- !u!1001 &5199014522088645648
 PrefabInstance:
