@@ -12,4 +12,14 @@ public class GameSceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene(GameSceneConstants.StartScene);
     }
+
+    public void SwitchToWinScene()
+    {
+        SceneManager.LoadScene(GameSceneConstants.WinScene);
+    }
+
+    public void SwitchToLooseScene()
+    {
+        SceneManager.LoadScene(GameSceneConstants.LooseScene);
+    }
 }

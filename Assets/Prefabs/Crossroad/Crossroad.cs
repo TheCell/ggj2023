@@ -110,7 +110,7 @@ public class Crossroad : MonoBehaviour
     {
         Debug.Log("You lost!");
         GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
-        sceneSwitcher.SwitchToStartScene();
+        sceneSwitcher.SwitchToLooseScene();
     }
 
     private void RedrawEverything()
