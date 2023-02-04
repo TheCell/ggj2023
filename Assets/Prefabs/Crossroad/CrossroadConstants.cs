@@ -7,6 +7,7 @@ public class CrossroadConstants : MonoBehaviour
     public GameObject treePrefab;
     public int treeTickDamageRate;
     public int treeTickDamageAmount;
+    public int crossroadNewBuildTreshhold;
 
     private int fixedUpdateCounter = 0;
 
