@@ -106,7 +106,7 @@ public class Crossroad : MonoBehaviour
         {
             if (crossroad.GetComponent<Crossroad>().HasTree())
             {
-                return true;
+                //return true;
             }
         }
     }
