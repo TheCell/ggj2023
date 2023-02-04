@@ -106,7 +106,7 @@ public class Crossroad : MonoBehaviour
     private void LoseGame()
     {
         Debug.Log("You lost!");
-        GameSceneSwitcher sceneSwitcher = new GameSceneSwitcher();
+        GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
         sceneSwitcher.SwitchToStartScene();
     }
 

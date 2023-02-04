@@ -7,5 +7,7 @@ public class Monument : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("You won!");
+        GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
+        sceneSwitcher.SwitchToStartScene();
     }
 }
