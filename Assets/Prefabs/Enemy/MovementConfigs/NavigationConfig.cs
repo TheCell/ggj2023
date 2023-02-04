@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BaseMovementConfig", menuName = "ScriptableObjects/BaseMovementScriptableObject", order = 1)]
+[CreateAssetMenu(fileName = "BaseMovementConfig", menuName = "ScriptableObjects/Nav/BaseMovementScriptableObject", order = 1)]
 public class NavigationConfig : ScriptableObject
 {
     public float Speed;
