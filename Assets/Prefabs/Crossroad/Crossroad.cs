@@ -152,13 +152,4 @@ public class Crossroad : MonoBehaviour
             }
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            //if(transform.GetSiblingIndex() % 2 == 0)
-            DestroyTree();
-        }
-    }
 }
