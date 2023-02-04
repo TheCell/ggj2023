@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9095037911729094839}
   - component: {fileID: 7536853911553629906}
-  m_Layer: 0
+  - component: {fileID: 302851586680961036}
+  m_Layer: 7
   m_Name: Crossroad
   m_TagString: Crossroad
   m_Icon: {fileID: 0}
@@ -48,6 +49,27 @@ MonoBehaviour:
   connectedCrossroads: []
   adjacentBuildings: []
   startsWithTree: 0
+--- !u!65 &302851586680961036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090946834034724175}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6100038479746286709
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7807661401332338446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Root Child Object
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
