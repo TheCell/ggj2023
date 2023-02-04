@@ -5,6 +5,7 @@ using UnityEngine;
 public class Crossroad : MonoBehaviour
 {
     [SerializeField] private List<GameObject> connectedCrossroads = new List<GameObject>();
+    [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
 
     private GameObject treeGameObject;
 
@@ -13,31 +14,41 @@ public class Crossroad : MonoBehaviour
     {
         foreach (GameObject crossroad in connectedCrossroads)
         {
-            crossroad.GetComponent<Crossroad>().EnsureConnectionBothWays(this.gameObject);
+            crossroad.GetComponent<Crossroad>().EnsureStreetConnectionBothWays(this.gameObject);
+        }
+        foreach (GameObject building in adjacentBuildings)
+        {
+            building.GetComponent<Building>().EnsureBuildingConnectionBothWays(this.gameObject);
         }
 
         // Debug
         PlantTree();
     }
 
-    public void EnsureConnectionBothWays(GameObject otherCrossroad)
+    public void EnsureStreetConnectionBothWays(GameObject otherGameobject)
     {
-        if(!connectedCrossroads.Contains(otherCrossroad))
+        if (!connectedCrossroads.Contains(otherGameobject))
         {
-            connectedCrossroads.Add(otherCrossroad);
+            connectedCrossroads.Add(otherGameobject);
+        }
+    }
+    public void EnsureBuildingConnectionBothWays(GameObject otherGameobject)
+    {
+        if (!adjacentBuildings.Contains(otherGameobject))
+        {
+            adjacentBuildings.Add(otherGameobject);
         }
     }
 
     private void PlantTree()
     {
         GameObject treePrefab = transform.parent.gameObject.GetComponent<CrossroadConstants>().treePrefab;
-        treeGameObject = Instantiate(treePrefab, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+        treeGameObject = Instantiate(treePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
         treeGameObject.transform.parent = this.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool HasTree() 
     {
-        
+        return treeGameObject != null;
     }
 }

@@ -6,6 +6,7 @@ public class Tree : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private int startingHealth;
+    [SerializeField] private int attack;
 
     private int currentHealth;
     private Renderer treeRenderer;
@@ -29,6 +30,8 @@ public class Tree : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        SetSize();
     }
 
     public void Heal(int damage)
@@ -38,6 +41,23 @@ public class Tree : MonoBehaviour
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
+        }
+
+        SetSize();
+    }
+
+    private void SetSize()
+    {
+        float scalingFactor = 1f * currentHealth / startingHealth;
+        transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log(other.name);
+            //other.GetComponent<Enemy>().TakeDamage(attack);
         }
     }
 }
