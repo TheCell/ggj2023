@@ -7,6 +7,7 @@ public class Crossroad : MonoBehaviour
 {
     [SerializeField] private List<GameObject> connectedCrossroads = new List<GameObject>();
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
+    [SerializeField] private bool startsWithTree;
 
     private GameObject treeGameObject;
     private List<GameObject> rootGameObjects = new List<GameObject>();
@@ -28,8 +29,10 @@ public class Crossroad : MonoBehaviour
             building.GetComponent<Building>().EnsureBuildingConnectionBothWays(this.gameObject);
         }
 
-        // Debug
-        PlantTree();
+        if (startsWithTree)
+        {
+            PlantTree();
+        }
     }
 
     public void EnsureStreetConnectionBothWays(GameObject otherGameobject)
