@@ -8,14 +8,18 @@ public class Health : MonoBehaviour, IHealth
     private int maxHealth;
     private int currentHealth;
     private int startingHealth;
-    private int tickDamageRate;
+    private float tickDamageRate;
     private int tickDamageAmount;
+    private int tickStableHealth;
 
-    private int fixedUpdateCounter = 0;
+
+    private float lastTickTime;
+
 
     void Start()
     {
         ApplyConfig(healthScriptableObject);
+        tickDamageRate = tickDamageRate * 0.01f;
     }
 
     public void Die()
@@ -37,27 +41,37 @@ public class Health : MonoBehaviour, IHealth
         {
             currentHealth = maxHealth;
         }
+
+        TreeCheck();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (tickDamageAmount + tickDamageRate > 0 && fixedUpdateCounter >= tickDamageRate)
+        if (tickDamageRate > 0 && Time.time > lastTickTime + tickDamageRate)
         {
-            this.GetComponent<Health>().TickDamage();
-            this.GetComponent<Tree>().SetSize();
-
-            fixedUpdateCounter = 0;
-        }
-        else
-        {
-            fixedUpdateCounter++;
+            lastTickTime = Time.time;
+            TickDamage();
         }
     }
 
     public void TickDamage()
     {
-        TakeDamage(tickDamageAmount);
+        int tickFloor = tickStableHealth;
+        if (GetComponent<Tree>())
+        {
+            tickFloor /= 2;
+            tickFloor *= transform.parent.GetComponent<Crossroad>().ConnectedTreesAmount();
+        }
+
+        if (currentHealth >= tickStableHealth + tickFloor)
+        {
+            TakeDamage(tickDamageAmount);
+        } 
+ //       else if (currentHealth >= tickStableHealth)
+ //       {
+ //           SetHealth(tickStableHealth);
+ //       }
     }
 
     public void TakeDamage(int damage)
@@ -66,6 +80,27 @@ public class Health : MonoBehaviour, IHealth
         if (currentHealth < 0)
         {
             Die();
+        }
+
+        TreeCheck();
+    }
+
+    private void SetHealth(int health)
+    {
+        currentHealth = health;
+        if (currentHealth < 0)
+        {
+            Die();
+        }
+
+        TreeCheck();
+    }
+
+    private void TreeCheck()
+    {
+        if (GetComponent<Tree>())
+        {
+            this.GetComponent<Tree>().SetSize();
         }
     }
 
@@ -76,6 +111,7 @@ public class Health : MonoBehaviour, IHealth
         this.startingHealth = healthConfig.StartingHealth;
         this.tickDamageRate = healthConfig.TickDamageRate;
         this.tickDamageAmount = healthConfig.TickDamageAmount;
+        this.tickStableHealth = healthConfig.TickStableHealth;
     }
 
     public int getCurrentHealth() { return currentHealth; }

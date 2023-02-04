@@ -129,6 +129,21 @@ public class Crossroad : MonoBehaviour
         return treeGameObject != null;
     }
 
+    public int ConnectedTreesAmount()
+    {
+        int amount = 0;
+
+        foreach (GameObject crossroad in connectedCrossroads)
+        {
+            if (crossroad.GetComponent<Crossroad>().HasTree())
+            {
+                amount++;
+            }
+        }
+
+        return amount;
+    }
+
     public void RedrawRoots()
     {
         foreach(GameObject root in rootGameObjects)

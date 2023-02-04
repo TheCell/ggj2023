@@ -16,3 +16,4 @@ MonoBehaviour:
   StartingHealth: 50
   TickDamageRate: 10
   TickDamageAmount: 1
+  TickStableHealth: 20
