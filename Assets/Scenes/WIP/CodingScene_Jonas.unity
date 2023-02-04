@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: startsWithTree
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: adjacentBuildings.Array.size
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: startsWithTree
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: adjacentBuildings.Array.size
@@ -411,6 +411,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2063211537473435638, guid: 0692f3785e9bfd74495400069ef850be, type: 3}
   m_PrefabInstance: {fileID: 5199014522470504591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &905833184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
+  m_PrefabInstance: {fileID: 737757241}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &908264646 stripped
 GameObject:
@@ -947,6 +952,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3558374498679765909, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558374498679765909, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[0]
+      value: 
+      objectReference: {fileID: 905833184}
+    - target: {fileID: 3558374498679765909, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 354364230}
+    - target: {fileID: 3558374498679765909, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 186283225}
+    - target: {fileID: 3558374498679765909, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 908264646}
     - target: {fileID: 3558374498679765912, guid: 2dff2134d98fd544ba997a02b2d8e702, type: 3}
       propertyPath: m_Name
       value: Monument
