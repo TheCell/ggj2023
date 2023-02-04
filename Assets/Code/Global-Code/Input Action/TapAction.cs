@@ -12,7 +12,7 @@ public class TapAction : MonoBehaviour
         ApplyConfig(tapActionConfig);
     }
 
-    private void tapAction()
+    public void tapAction()
     {
         if (GetComponent<Tree>())
         {
@@ -21,7 +21,15 @@ public class TapAction : MonoBehaviour
         }
         else if (GetComponent<Crossroad>())
         {
-            this.GetComponent<Crossroad>().PrepareTree();
+            if(this.GetComponent<Crossroad>().HasTree())
+            {
+                this.GetComponentInChildren<Health>().Heal(healAmount);
+                this.GetComponentInChildren<Tree>().SetSize();
+            } 
+            else
+            {
+                this.GetComponent<Crossroad>().PrepareTree();
+            }
         }
     }
 
