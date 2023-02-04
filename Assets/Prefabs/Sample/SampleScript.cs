@@ -8,12 +8,12 @@ public class SampleScript : MonoBehaviour
     [SerializeField] private float timeBetweenChange = 2f;
 
     private float lastColorChangeTimeStamp = 0f;
-    private Renderer renderer;
+    private Renderer sampleRenderer;
     private int currentColor = 0;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        sampleRenderer = GetComponent<Renderer>();
     }
 
     void Update()
@@ -29,12 +29,12 @@ public class SampleScript : MonoBehaviour
     {
         if (currentColor == 0)
         {
-            renderer.material.color = firstColor;
+            sampleRenderer.material.color = firstColor;
             currentColor = 1;
         }
         else
         {
-            renderer.material.color = secondColor;
+            sampleRenderer.material.color = secondColor;
             currentColor = 0;
         }
     }

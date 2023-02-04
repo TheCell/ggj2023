@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
-    [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int startingHealth;
 
+    private int currentHealth;
     private Renderer treeRenderer;
     
 
@@ -15,15 +17,27 @@ public class Tree : MonoBehaviour
         treeRenderer = GetComponent<Renderer>();
         // remove this once we have actual models & textures
         treeRenderer.material.color = Color.green;
+
+        currentHealth = startingHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    public void Heal(int damage)
+    {
+        currentHealth += damage;
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
         }
     }
 }

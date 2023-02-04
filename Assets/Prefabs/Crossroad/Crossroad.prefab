@@ -118,5 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb2fea6a74fef4fadf75abe24a2ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedCrossroads:
-  - {fileID: 6090946834034724175}
+  connectedCrossroads: []
