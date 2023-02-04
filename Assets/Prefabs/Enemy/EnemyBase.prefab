@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1208927775262724073}
   - component: {fileID: 8325791894181027032}
   - component: {fileID: 6765506213960734376}
+  - component: {fileID: 2593609944831166482}
   m_Layer: 6
   m_Name: EnemyBase
   m_TagString: Enemy
@@ -164,6 +165,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54161efd7038f1149b786e5ea46c657b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Died:
+    m_PersistentCalls:
+      m_Calls: []
+  TreeHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  ebnableDebugLog: 0
   healthScriptableObject: {fileID: 11400000, guid: a55807528231c2641b9eec8faabc48f8, type: 2}
 --- !u!114 &1208927775262724073
 MonoBehaviour:
@@ -205,10 +213,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -290,3 +298,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2593609944831166482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173904997670909451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1552d9844ea5e24f815f4f5a4645361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

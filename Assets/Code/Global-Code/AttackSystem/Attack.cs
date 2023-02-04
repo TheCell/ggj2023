@@ -5,6 +5,30 @@ using UnityEngine.Events;
 public class Attack : MonoBehaviour, IAttack
 {
     public UnityEvent TargetDestroyed = new();
+    public Boolean HasActiveTarget
+    {
+        get
+        {
+            return target != null && hasActiveTarget;
+        }
+        
+        private set
+        {
+            hasActiveTarget = value;
+        }
+    }
+
+    public Vector3 TargetPosition
+    {
+        get
+        {
+            return target.transform.position;
+        }
+
+        private set
+        {
+        }
+    }
 
     [SerializeField] private AttackConfig AttackScriptableObject;
     private int AttackDamage;
@@ -54,7 +78,6 @@ public class Attack : MonoBehaviour, IAttack
     {
         if (target == null)
         {
-            Debug.Log("no target left");
             ResetTarget();
             hasActiveTarget = false;
             TargetDestroyed.Invoke();

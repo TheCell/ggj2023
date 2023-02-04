@@ -5,24 +5,43 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AudioCollection", menuName = "ScriptableObjects/SOAudioCollection", order = 1)]
 public class SOAudioCollection : ScriptableObject
 {
-    [SerializeField]
-    private SingleAudioClip spawnAudio;
+    //[SerializeField]
+    //private SingleAudioClip spawnAudio;
+
+    //[SerializeField]
+    //private SingleAudioClip idleAudio;
+
+    //[SerializeField]
+    //private SingleAudioClip attackAudio;
+
+    //[SerializeField]
+    //private SingleAudioClip despawnAudio;
 
     [SerializeField]
-    private SingleAudioClip idleAudio;
+    private AudioClip spawnAudio2;
 
     [SerializeField]
-    private SingleAudioClip attackAudio;
+    private AudioClip idleAudio2;
 
     [SerializeField]
-    private SingleAudioClip despawnAudio;
+    private AudioClip attackAudio2;
 
-    public SingleAudioClip GetSpawnAudio { get => spawnAudio; }
+    [SerializeField]
+    private AudioClip despawnAudio2;
 
-    public SingleAudioClip GetAttackAudio { get => attackAudio; }
+    //public SingleAudioClip GetSpawnAudio { get => spawnAudio; }
 
-    public SingleAudioClip GetIdleAudio { get => idleAudio; }
+    //public SingleAudioClip GetAttackAudio { get => attackAudio; }
 
-    public SingleAudioClip GetDespawnAudio { get => despawnAudio; }
+    //public SingleAudioClip GetIdleAudio { get => idleAudio; }
+
+    //public SingleAudioClip GetDespawnAudio { get => despawnAudio; }
+    public AudioClip GetSpawnAudio { get => spawnAudio2; }
+
+    public AudioClip GetAttackAudio { get => attackAudio2; }
+
+    public AudioClip GetIdleAudio { get => idleAudio2; }
+
+    public AudioClip GetDespawnAudio { get => despawnAudio2; }
 
 }

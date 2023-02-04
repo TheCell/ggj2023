@@ -9,8 +9,12 @@ public class EnemyBehaviour : MonoBehaviour
     private PlayAudioLocalSource playAudio;
     [SerializeField] private SOAudioCollection enemyAudio;
 
+    private AudioSource audioSource;
+
     void Start()
     {
+
+        audioSource = GetComponent<AudioSource>();
         playAudio = GetComponent<PlayAudioLocalSource>();
         agent = GetComponent<NavigationAgent>();
         if (agent == null)
@@ -30,7 +34,9 @@ public class EnemyBehaviour : MonoBehaviour
 
         if(enemyAudio != null)
         {
-            playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
+            audioSource.clip = enemyAudio.GetSpawnAudio;
+            audioSource.Play();
+            //playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
         }
 
         else
@@ -73,12 +79,16 @@ public class EnemyBehaviour : MonoBehaviour
         if (Vector3.Distance(target.transform.position, transform.position) <= agent.AgentRange())
         {
             attack.SetTarget(target);
-            playAudio.PlayAudioClip(enemyAudio.GetAttackAudio);
+            //playAudio.PlayAudioClip(enemyAudio.GetAttackAudio);
+            audioSource.clip = enemyAudio.GetAttackAudio;
+            audioSource.Play();
         }
         else
         {
             agent.SetTarget(target.transform);
-            playAudio.PlayAudioClip(enemyAudio.GetIdleAudio);
+            //playAudio.PlayAudioClip(enemyAudio.GetIdleAudio);
+            audioSource.clip = enemyAudio.GetIdleAudio;
+            audioSource.Play();
         }
     }
 
