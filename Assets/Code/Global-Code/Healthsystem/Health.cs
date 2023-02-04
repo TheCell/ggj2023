@@ -26,8 +26,8 @@ public class Health : MonoBehaviour, IHealth
 
     public void Die()
     {
-        Destroy(gameObject);
         Died.Invoke();
+        Destroy(gameObject);
     }
 
     public void Heal(int hpToheal)
