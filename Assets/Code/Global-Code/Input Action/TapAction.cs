@@ -17,7 +17,6 @@ public class TapAction : MonoBehaviour
     {
         if(!cooldown)
         {
-            Debug.Log("Fired!");
             if (GetComponent<Tree>())
             {
                 this.GetComponent<Health>().Heal(healAmount);
