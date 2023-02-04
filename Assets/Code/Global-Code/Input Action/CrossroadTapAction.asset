@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0308e430895880546839266f8eb7a257, type: 3}
   m_Name: CrossroadTapAction
   m_EditorClassIdentifier: 
-  healAmount: 0
+  healAmount: 10
