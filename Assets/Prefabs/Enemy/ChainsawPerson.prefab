@@ -135,9 +135,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1208927775262724073, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 1745817117}
+    - target: {fileID: 1208927775262724073, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
       propertyPath: AttackScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 56ec70a4c86bdd047b0046242aba98a8, type: 2}
+    - target: {fileID: 2606947658014203199, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 1745817117}
+    - target: {fileID: 2606947658014203199, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
+      propertyPath: ebnableDebugLog
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2606947658014203199, guid: 9c832e0666be4f34aaf35959f6462246, type: 3}
       propertyPath: healthScriptableObject
       value: 

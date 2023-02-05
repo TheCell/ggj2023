@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,7 @@ public class Health : MonoBehaviour, IHealth
     public UnityEvent Died = new();
     public UnityEvent TreeHealthChanged = new();
     public UnityEvent TreeHealed = new();
+    public Animator Animator;
 
     [SerializeField] bool ebnableDebugLog;
     [SerializeField] private HealthScriptableObject healthScriptableObject;
@@ -28,6 +30,20 @@ public class Health : MonoBehaviour, IHealth
     public void Die()
     {
         Died.Invoke();
+        if (Animator)
+        {
+            Animator.SetTrigger("Death");
+            StartCoroutine(DelayedDestroy());
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
 

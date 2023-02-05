@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEditor.Animations;
 
 public class Attack : MonoBehaviour, IAttack
 {
+    public Animator Animator;
     public UnityEvent TargetDestroyed = new();
     public Boolean HasActiveTarget
     {
@@ -11,7 +13,7 @@ public class Attack : MonoBehaviour, IAttack
         {
             return target != null && hasActiveTarget;
         }
-        
+
         private set
         {
             hasActiveTarget = value;
@@ -76,6 +78,11 @@ public class Attack : MonoBehaviour, IAttack
 
     public void AttackTarget()
     {
+        if (Animator)
+        {
+            Animator.SetTrigger("Attack");
+        }
+
         if (target == null)
         {
             ResetTarget();
