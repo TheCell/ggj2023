@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Crossroad : MonoBehaviour
 {
     [SerializeField] private CrossroadScriptableObject crossroadScriptableObject;
-    [SerializeField] private List<GameObject> connectedCrossroads = new List<GameObject>();
+    [SerializeField] public List<GameObject> connectedCrossroads = new List<GameObject>();
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
     [SerializeField] public bool startsWithTree;
 
