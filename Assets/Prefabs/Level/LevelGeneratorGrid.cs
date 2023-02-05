@@ -63,7 +63,7 @@ public class LevelGeneratorGrid : MonoBehaviour
         }
 
         //Base
-        int center = fieldSize / 2;
+        int center = (fieldSize / 2) -1;
         crossRoadGrid[center, center].GetComponent<Crossroad>().startsWithTree = true;
         crossRoadGrid[center + 1, center].GetComponent<Crossroad>().startsWithTree = true;
         crossRoadGrid[center, center + 1].GetComponent<Crossroad>().startsWithTree = true;
