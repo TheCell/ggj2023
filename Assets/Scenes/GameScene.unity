@@ -128,6 +128,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8473986555172742668, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
   m_PrefabInstance: {fileID: 1042731248}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149226792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3468540243864140231, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+  m_PrefabInstance: {fileID: 780242451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &154242465
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +728,14 @@ PrefabInstance:
       propertyPath: connectedCrossroads.Array.data[3]
       value: 
       objectReference: {fileID: 269653689}
+    - target: {fileID: 882021171354135130, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 882021171354135130, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: connectedCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 1448039396}
     - target: {fileID: 882021171542258931, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: adjacentBuildings.Array.size
       value: 3
@@ -1757,6 +1770,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5573132673335758623, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
   m_PrefabInstance: {fileID: 926574448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1448039396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3833070472946050993, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+  m_PrefabInstance: {fileID: 1958413525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506857925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8473986555172742668, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
@@ -1998,6 +2016,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661719245829714988, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 149226792}
     - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: connectedCrossroads.Array.size
       value: 2
