@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class TreeBehaviour : MonoBehaviour
 {
     [SerializeField] float attackRange = 3f;
@@ -11,8 +12,12 @@ public class TreeBehaviour : MonoBehaviour
 
     private bool isAttacking = false;
 
+    [SerializeField] private SOAudioCollection treeAudio;
+    private AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         attack = GetComponent<Attack>();
         if (attack == null)
         {
@@ -35,6 +40,19 @@ public class TreeBehaviour : MonoBehaviour
         if (crossroad == null)
         {
             Debug.LogError("Crossroad not present on Parent");
+        }
+
+        if (treeAudio != null)
+        {
+            audioSource.clip = treeAudio.GetSpawnAudio;
+            audioSource.volume = treeAudio.GetSpawnVolume;
+            audioSource.Play();
+            //playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
+        }
+
+        else
+        {
+            Debug.LogError("Missing SO with audio information in Enemy Behaviour");
         }
 
         attack.TargetDestroyed.AddListener(GetNextTarget);
@@ -68,6 +86,12 @@ public class TreeBehaviour : MonoBehaviour
                 isAttacking = false;
                 attack.ResetTarget();
                 GetNextTarget();
+            }
+            else
+            {
+                audioSource.volume = treeAudio.GetAttackVolume;
+                audioSource.clip = treeAudio.GetAttackAudio;
+                audioSource.Play();
             }
         }
         else
@@ -115,6 +139,10 @@ public class TreeBehaviour : MonoBehaviour
 
     private void TreeDied()
     {
+        audioSource.volume = treeAudio.GetDespawnVolume;
+        audioSource.clip = treeAudio.GetAttackAudio;
+        audioSource.PlayOneShot(audioSource.clip);
+
         crossroad.DestroyTree();
     }
 
