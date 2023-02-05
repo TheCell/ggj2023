@@ -187,13 +187,13 @@ public class Crossroad : MonoBehaviour
     public void ContextMenuAction(ActionUiType type)
     {
         GameObject newTree;
+        GameObject oldTree = treeGameObject;
         float healthRatio = 1;
 
-        Debug.Log(treeGameObject);
         if (treeGameObject)
         {
-            int formerCurrentHealth = treeGameObject.GetComponent<Health>().getCurrentHealth();
-            int formerStartHealth = treeGameObject.GetComponent<Health>().getStartingHealth();
+            int formerCurrentHealth = oldTree.GetComponent<Health>().getCurrentHealth();
+            int formerStartHealth = oldTree.GetComponent<Health>().getStartingHealth();
             healthRatio = 1f * formerCurrentHealth / formerStartHealth;
         }
 
@@ -219,10 +219,11 @@ public class Crossroad : MonoBehaviour
                 break;
         }
 
+        newTree.transform.parent = this.transform;
+        newTree.GetComponent<Health>().SetHealthByRatio(healthRatio);
+
         DestroyTree();
         treeGameObject = newTree;
-        treeGameObject.transform.parent = this.transform;
-        treeGameObject.GetComponent<Health>().SetHealthByRatio(healthRatio);
 
         RedrawEverything();
     }

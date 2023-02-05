@@ -14,6 +14,7 @@ public class TreeBehaviour : MonoBehaviour
 
     [SerializeField] private SOAudioCollection treeAudio;
     private AudioSource audioSource;
+    [SerializeField] private AudioSource growthAudioSource;
 
     void Start()
     {
@@ -55,9 +56,15 @@ public class TreeBehaviour : MonoBehaviour
             Debug.LogError("Missing SO with audio information in Enemy Behaviour");
         }
 
+        if (growthAudioSource == null)
+        {
+            Debug.LogError("TreeBehaviour.cs missing growthAudioSource SF Reference");
+        }
+
         attack.TargetDestroyed.AddListener(GetNextTarget);
         health.Died.AddListener(TreeDied);
         health.TreeHealthChanged.AddListener(HealthChanged);
+        health.TreeHealed.AddListener(Healed);
     }
 
     private void OnDisable()
@@ -65,6 +72,7 @@ public class TreeBehaviour : MonoBehaviour
         health.Died.RemoveListener(TreeDied);
         attack.TargetDestroyed.RemoveListener(GetNextTarget);
         health.TreeHealthChanged.RemoveListener(HealthChanged);
+        health.TreeHealed.RemoveListener(Healed);
     }
 
     void Update()
@@ -75,6 +83,11 @@ public class TreeBehaviour : MonoBehaviour
     private void HealthChanged()
     {
         tree.SetSize();
+    }
+
+    private void Healed()
+    {
+        growthAudioSource.Play();
     }
 
     private void CheckHasValidTargetOrFindNewAndAttack()
