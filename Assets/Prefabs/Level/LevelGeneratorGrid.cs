@@ -13,6 +13,7 @@ public class LevelGeneratorGrid : MonoBehaviour
     public GameObject treeObject;
     public GameObject crossroadObject;
     public int fieldSize;
+    public GameObject enemySpawner;
 
     private int maxDensity = 10;
     private int[] roationOptions = { 0, 90, 180, 270 };
@@ -70,6 +71,8 @@ public class LevelGeneratorGrid : MonoBehaviour
         crossRoadGrid[center + 1, center + 1].GetComponent<Crossroad>().startsWithTree = true;
 
 
+        // Initiate spawner
+        Instantiate(enemySpawner, new Vector3(-1, 0, -1), Quaternion.identity);
 
     }
 
