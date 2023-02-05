@@ -15,5 +15,5 @@ MonoBehaviour:
   MaxHealth: 150
   StartingHealth: 75
   TickDamageRate: 25
-  TickDamageAmount: 1
+  TickDamageAmount: 3
   TickStableHealth: 50

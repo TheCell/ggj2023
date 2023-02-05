@@ -95,7 +95,6 @@ public class Health : MonoBehaviour, IHealth
     public void SetHealthByRatio(float ratio)
     {
         int calulatedHealth = (int)(ratio * this.startingHealth);
-        //Debug.Log(startingHealth);
         this.currentHealth = calulatedHealth;
 
         TreeHealthChanged.Invoke();

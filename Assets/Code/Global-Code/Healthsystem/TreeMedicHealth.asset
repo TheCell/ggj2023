@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 120
   StartingHealth: 60
-  TickDamageRate: 15
+  TickDamageRate: 25
   TickDamageAmount: 1
   TickStableHealth: 30

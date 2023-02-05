@@ -187,44 +187,50 @@ public class Crossroad : MonoBehaviour
     public void ContextMenuAction(ActionUiType type)
     {
         GameObject newTree;
-        GameObject oldTree = treeGameObject;
+        GameObject prefab;
         float healthRatio = 1;
 
         if (treeGameObject)
         {
-            int formerCurrentHealth = oldTree.GetComponent<Health>().getCurrentHealth();
-            int formerStartHealth = oldTree.GetComponent<Health>().getStartingHealth();
+            int formerCurrentHealth = treeGameObject.GetComponent<Health>().getCurrentHealth();
+            int formerStartHealth = treeGameObject.GetComponent<Health>().getStartingHealth();
             healthRatio = 1f * formerCurrentHealth / formerStartHealth;
         }
 
-        // TODO: implement
         switch (type)
         {
             case ActionUiType.Top:
                 Debug.Log("top");
-                newTree = Instantiate(treePrefab[1], transform.GetChild(0).position, transform.GetChild(0).rotation);
+                prefab = treePrefab[1];
                 break;
             case ActionUiType.Right:
                 Debug.Log("right");
-                newTree = Instantiate(treePrefab[2], transform.GetChild(0).position, transform.GetChild(0).rotation);
+                prefab = treePrefab[2];
                 break;
             case ActionUiType.Left:
-                Debug.Log("left");
-                newTree = Instantiate(treePrefab[3], transform.GetChild(0).position, transform.GetChild(0).rotation);
+                Debug.Log("left"); 
+                prefab = treePrefab[3];
                 break;
             case ActionUiType.Bottom:
             default:
                 Debug.Log("bottom");
-                newTree = Instantiate(treePrefab[0], transform.GetChild(0).position, transform.GetChild(0).rotation);
+                prefab = treePrefab[0];
                 break;
         }
 
+        newTree = Instantiate(prefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
         newTree.transform.parent = this.transform;
-        newTree.GetComponent<Health>().SetHealthByRatio(healthRatio);
+        StartCoroutine(SetTreeHealthAfterReplacement(healthRatio));
 
         DestroyTree();
         treeGameObject = newTree;
 
         RedrawEverything();
+    }
+
+    private IEnumerator SetTreeHealthAfterReplacement(float ratio)
+    {
+        yield return new WaitForEndOfFrame();
+        treeGameObject.GetComponent<Health>().SetHealthByRatio(ratio);
     }
 }
