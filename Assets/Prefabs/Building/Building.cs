@@ -1,19 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Building : MonoBehaviour
 {
     [SerializeField] private List<GameObject> surroundingCrossroads = new List<GameObject>();
+    [SerializeField] private List<GameObject> buildingChoices = new();
 
-    private Renderer buildingRenderer;
+    private GameObject building;
+    private Overgrowth overgrowth;
 
-    private void Awake()
+    private void OnEnable()
     {
-        buildingRenderer = GetComponent<Renderer>();
+        var random = new System.Random();
+        var randomChoiceIndex = random.Next(buildingChoices.Count);
+        foreach (var choice in buildingChoices)
+        {
+            choice.SetActive(false);
+        }
+
+        building = buildingChoices[randomChoiceIndex];
+        overgrowth = building.GetComponentInChildren<Overgrowth>();
+        building.SetActive(true);
+        overgrowth.transform.localScale = Vector3.zero;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         foreach (GameObject crossroad in surroundingCrossroads)
@@ -34,15 +44,15 @@ public class Building : MonoBehaviour
     {
         if (CheckOvergrowthStatus())
         {
-            buildingRenderer.material.color = Color.green;
-            if(transform.GetComponent<Monument>())
+            overgrowth.transform.localScale = Vector3.one;
+            if (transform.GetComponent<Monument>())
             {
                 transform.GetComponent<Monument>().WinGame();
             }
         }
         else
         {
-            buildingRenderer.material.color = Color.grey;
+            overgrowth.transform.localScale = Vector3.zero;
         }
     }
 
