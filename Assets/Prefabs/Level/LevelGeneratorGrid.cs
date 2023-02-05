@@ -33,6 +33,17 @@ public class LevelGeneratorGrid : MonoBehaviour
                 Vector3 position = new Vector3(i * pointDistance, 0.079f, j * pointDistance);
 
                 crossRoadGrid[i, j] = Instantiate(crossroadObject, position, Quaternion.identity);
+
+                List<GameObject>  bros = new List<GameObject>();
+                if (i>0)
+                {
+                    bros.Add(crossRoadGrid[i-1, j]);
+                }
+                if (j > 0)
+                {
+                    bros.Add(crossRoadGrid[i, j-1]);
+                }
+                crossRoadGrid[i, j].GetComponent<Crossroad>().connectedCrossroads = bros;
             }
         }
         for (int i = 0; i < fieldSize-1; i++)
@@ -57,6 +68,9 @@ public class LevelGeneratorGrid : MonoBehaviour
         crossRoadGrid[center + 1, center].GetComponent<Crossroad>().startsWithTree = true;
         crossRoadGrid[center, center + 1].GetComponent<Crossroad>().startsWithTree = true;
         crossRoadGrid[center + 1, center + 1].GetComponent<Crossroad>().startsWithTree = true;
+
+
+
     }
 
     // Update is called once per frame
