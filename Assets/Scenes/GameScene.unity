@@ -135,13 +135,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -198,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 14.030001
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -240,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -259,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -301,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -318,13 +330,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -475,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6539565554072370288, guid: 0161674675bfa2a4186bae81866800d9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539565554072370288, guid: 0161674675bfa2a4186bae81866800d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -534,13 +550,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 24.03
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -583,10 +603,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+--- !u!1 &202720113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3687470237372864161, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 755198701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &216664858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8585627194141849244, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
   m_PrefabInstance: {fileID: 1998347714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &262947865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5573132673335758623, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 569403652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &354100628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9055468006148421129, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+  m_PrefabInstance: {fileID: 1394682684}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &364229077
 PrefabInstance:
@@ -600,13 +635,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 14.030001
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -657,13 +696,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: adjacentBuildings.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: adjacentBuildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 1687386103}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: adjacentBuildings.Array.data[3]
+      value: 
+      objectReference: {fileID: 1384218901}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1925454766}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -35.97
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -705,6 +764,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303082332451805122, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3303082332451805122, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_Name
+      value: Crossroad X
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833070472946050993, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_Name
+      value: Crossroad I
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473986555172742668, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_Name
+      value: Building O
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585627194141849244, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_Name
+      value: Building Z
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -727,13 +810,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -790,7 +877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -832,6 +919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -849,13 +940,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -906,9 +1001,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 478277516193740135, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 478277516193740135, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Name
+      value: Building P
+      objectReference: {fileID: 0}
+    - target: {fileID: 478277516193740138, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 478277516193740138, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1611740848}
+    - target: {fileID: 478277516193740138, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 1925454766}
+    - target: {fileID: 478277516193740138, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 492300977}
+    - target: {fileID: 478277516193740138, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[4]
+      value: 
+      objectReference: {fileID: 2073169042}
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.data[0]
+      value: 
+      objectReference: {fileID: 492300977}
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1611740848}
     - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_Name
       value: Tilevariant 4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
@@ -916,7 +1055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -35.97
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -954,6 +1093,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2937913011563058973, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3687470237372864161, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3687470237372864161, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Name
+      value: Building B
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687470237372864172, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687470237372864172, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 492300977}
+    - target: {fileID: 3687470237372864172, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 1825128127}
+    - target: {fileID: 5573132673335758623, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8229538599932819011, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1611740848}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -971,13 +1150,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1032,13 +1215,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
-      propertyPath: m_RootOrder
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1091,7 +1278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1705406331621089832, guid: 49f26618b52a3d7e1822887078d3c0f3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1705406331621089832, guid: 49f26618b52a3d7e1822887078d3c0f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1156,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1460002869140267915, guid: bfad2bfbba860b142a230ce10771b83f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1460002869140267915, guid: bfad2bfbba860b142a230ce10771b83f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1215,13 +1402,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -35.97
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1269,6 +1460,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3303082332451805122, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
   m_PrefabInstance: {fileID: 1998347714}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1008120131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3833070472946050993, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+  m_PrefabInstance: {fileID: 1042731248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1028131176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 478277516193740135, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 1288306191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1042731248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1277,13 +1478,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 1405888262}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.data[3]
+      value: 
+      objectReference: {fileID: 1028131176}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1742506781}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1325,6 +1546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1344,7 +1569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1386,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1403,13 +1632,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1466,7 +1699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 14.030001
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1508,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1527,7 +1764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.97
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1569,11 +1806,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+--- !u!1 &1193843367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9055468006143223445, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+  m_PrefabInstance: {fileID: 1394682684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1194006038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1588,7 +1834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1630,6 +1876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1643,9 +1893,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.data[0]
+      value: 
+      objectReference: {fileID: 1008120131}
+    - target: {fileID: 1502719300466771072, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 2073168734}
     - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_Name
       value: Tilevariant 4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
@@ -1653,7 +1919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1691,11 +1957,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5573132673335758623, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: buildingChoices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: buildingChoices.Array.data[3]
+      value: 
+      objectReference: {fileID: 2073168734}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 2073168734}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 1193843367}
+    - target: {fileID: 8229538599932819022, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 1742506781}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+--- !u!1 &1384218901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 478277516193740135, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 755198701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1390764585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1708,13 +2007,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1767,7 +2070,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4734505044553595709, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: adjacentBuildings.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4734505044553595709, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: connectedCrossroads.Array.size
@@ -1777,33 +2080,53 @@ PrefabInstance:
       propertyPath: adjacentBuildings.Array.data[1]
       value: 
       objectReference: {fileID: 216664858}
+    - target: {fileID: 4734505044553595709, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: adjacentBuildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 202720113}
     - target: {fileID: 4734505044553595709, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: connectedCrossroads.Array.data[2]
       value: 
       objectReference: {fileID: 492300977}
+    - target: {fileID: 4734505044553595709, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: connectedCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 492300977}
     - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: adjacentBuildings.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: connectedCrossroads.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: adjacentBuildings.Array.data[1]
       value: 
       objectReference: {fileID: 216664858}
     - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: adjacentBuildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 1506857925}
+    - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: adjacentBuildings.Array.data[3]
+      value: 
+      objectReference: {fileID: 262947865}
+    - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: connectedCrossroads.Array.data[2]
       value: 
       objectReference: {fileID: 958551899}
+    - target: {fileID: 4734505044875994516, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: connectedCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 2046217049}
     - target: {fileID: 5829155485604803414, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5829155485604803414, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.97
       objectReference: {fileID: 0}
     - target: {fileID: 5829155485604803414, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1845,11 +2168,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant Start
       objectReference: {fileID: 0}
+    - target: {fileID: 6109454801501054641, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299304223328032979, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 9055468005951908000, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 9055468006148421129, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 9055468006148421129, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+      propertyPath: m_Name
+      value: Crossroad A
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+--- !u!1 &1405888262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3687470237372864161, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 1288306191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1434887743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1858,13 +2206,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661719245829714988, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 354100628}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281780475193214047, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 1742506781}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1906,6 +2270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1925,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 24.03
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1967,11 +2335,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+--- !u!1 &1506857925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8473986555172742668, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+  m_PrefabInstance: {fileID: 1434887743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1560973676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1986,7 +2363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: -15.969999
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2028,6 +2405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2045,13 +2426,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 4 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2104,7 +2489,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1272511901276846109, guid: 3362ddd314ab081bf98b467ae5be3304, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1272511901276846109, guid: 3362ddd314ab081bf98b467ae5be3304, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2155,6 +2540,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3362ddd314ab081bf98b467ae5be3304, type: 3}
+--- !u!1 &1611740848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3303082332451805122, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+  m_PrefabInstance: {fileID: 438034283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1669435685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,11 +2555,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.79085
+      value: -9.56
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2177,7 +2567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.24686
+      value: 47.2
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2216,6 +2606,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
+--- !u!1 &1687386103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8229538599932819011, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 755198701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1695781262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,7 +2621,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2287,11 +2682,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.44384
+      value: 20.84
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2299,7 +2694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40.20364
+      value: 30.09
       objectReference: {fileID: 0}
     - target: {fileID: 916929665035900665, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2338,6 +2733,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
+--- !u!1 &1742506781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2937913011563058973, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 1288306191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1790951489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2350,13 +2750,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 14.030001
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2399,6 +2803,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+--- !u!1 &1825128127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9055468005951908000, guid: feaa0ef19e2f58440a488bb0abca34da, type: 3}
+  m_PrefabInstance: {fileID: 1394682684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1829117220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2413,7 +2822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2455,6 +2864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2474,7 +2887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2516,6 +2929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2533,13 +2950,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.97
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2582,6 +3003,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+--- !u!1 &1925454766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2937913011563058973, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+  m_PrefabInstance: {fileID: 2122200627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1958413525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2596,7 +3022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 4.0300007
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2638,6 +3064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2651,13 +3081,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 1384218901}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: adjacentBuildings.Array.data[3]
+      value: 
+      objectReference: {fileID: 202720113}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.data[1]
+      value: 
+      objectReference: {fileID: 2073169042}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 1925454766}
+    - target: {fileID: 661719245829714988, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: connectedCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 1825128127}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.97
       objectReference: {fileID: 0}
     - target: {fileID: 1765379591694662727, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2699,11 +3157,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 2 rotated (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2041139573871290784, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303082332451805122, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3303082332451805122, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Name
+      value: Crossroad X
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833070472946050993, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3833070472946050993, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Name
+      value: Crossroad C
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196530943712145490, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8585627194141849233, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: surroundingCrossroads.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585627194141849233, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[2]
+      value: 
+      objectReference: {fileID: 354100628}
+    - target: {fileID: 8585627194141849233, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: surroundingCrossroads.Array.data[3]
+      value: 
+      objectReference: {fileID: 1825128127}
+    - target: {fileID: 8585627194141849244, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8585627194141849244, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+      propertyPath: m_Name
+      value: Building A
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5787db40c6817ac43bcb805830e8a197, type: 3}
+--- !u!1 &2046217049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3833070472946050993, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+  m_PrefabInstance: {fileID: 1434887743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2073168734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3303082332451805122, guid: 93d3fc0be6bb00c43be209afb6d7133f, type: 3}
+  m_PrefabInstance: {fileID: 1434887743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2073169042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2937913011563058973, guid: ff0165d99cd8b594987e2e57f172d4e0, type: 3}
+  m_PrefabInstance: {fileID: 755198701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2122200627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2716,13 +3233,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilevariant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1819702808862615935, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.97
       objectReference: {fileID: 0}
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2759,6 +3280,38 @@ PrefabInstance:
     - target: {fileID: 2120233155761896600, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937913011563058973, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 2937913011563058973, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad R
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540243864140231, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3468540243864140231, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540243867330907, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3468540243867330907, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad H
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540244194928494, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3468540244194928494, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad Q
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -216,6 +216,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
@@ -242,6 +246,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120233155761896600}
     m_Modifications:
+    - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
       value: Crossroad 2
@@ -334,6 +342,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2120233155761896600}
     m_Modifications:
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
       value: Crossroad 3
       objectReference: {fileID: 0}
@@ -425,6 +437,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2120233155761896600}
     m_Modifications:
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
       value: Crossroad 4
       objectReference: {fileID: 0}
@@ -515,6 +531,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120233155761896600}
     m_Modifications:
+    - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
       value: Crossroad 1
