@@ -47,6 +47,72 @@
                 },
                 {
                     "name": "",
+                    "id": "1e823cfa-54e9-4ca8-91cd-cf3aed5b0c62",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "f5193a00-bc8f-4534-928b-9c22edddbcf4",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "56a23e99-4385-4c67-b88b-20fc33351981",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a09ad331-9ccb-4f7f-83c8-c5f123114865",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "81b21c98-6d13-424a-ac42-1479ce17b5ab",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f77ce62f-91a6-4172-92e5-ee7e97475fdc",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
                     "id": "206198d0-7818-4276-80d9-8bbb82eace8a",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -69,6 +135,17 @@
                 },
                 {
                     "name": "",
+                    "id": "41b0656f-2b60-4907-9858-5aa88dece426",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimaryClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c750c5b4-30ea-4da9-a463-9a77ef7f59c6",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
@@ -82,6 +159,17 @@
                     "name": "",
                     "id": "9a3bb550-6c9b-4da9-a7c7-730a390bad96",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62be64c5-e7ce-44f9-a8ab-1874800ca63e",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
