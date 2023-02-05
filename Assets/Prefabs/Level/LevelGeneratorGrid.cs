@@ -20,7 +20,7 @@ public class LevelGeneratorGrid : MonoBehaviour
     private int[] roationOptions = { 0, 90, 180, 270 };
     private int pointDistance = 5;
     private GameObject[,] crossRoadGrid;
-    private int goalMonument = 4;
+    private int goalMonument = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -61,13 +61,12 @@ public class LevelGeneratorGrid : MonoBehaviour
                 if (i== goalMonument && j== goalMonument)
                 {
                     b = Instantiate(monumentObject, new Vector3(pointDistance + (pointDistance / 2), 0, pointDistance + (pointDistance / 2)), Quaternion.identity);
-                    connectAdjacentBuildings(b);
-                    
-                }
-                if (!(i==1 && j==1) && building)
+                    connectAdjacentCrossroadsToBuilding(b, i, j);
+
+                } else if(building)
                 {
                     b= Instantiate(buildingObjects[rand], positionBuilding, Quaternion.Euler(new Vector3(0, roationOptions[rotation], 0)));
-                    connectAdjacentBuildings(b);
+                    connectAdjacentCrossroadsToBuilding(b, i, j);
                 }
             }
         }
@@ -81,7 +80,7 @@ public class LevelGeneratorGrid : MonoBehaviour
 
 
         // Initiate spawner
-        Instantiate(enemySpawner, new Vector3(-1, 0, -1), Quaternion.identity);
+        Instantiate(enemySpawner, new Vector3(-5, 0,-5), Quaternion.identity); 
 
     }
 
@@ -91,13 +90,17 @@ public class LevelGeneratorGrid : MonoBehaviour
 
     }
 
-   void connectAdjacentBuildings(GameObject b)
+   void connectAdjacentCrossroadsToBuilding(GameObject b, int i, int j)
     {
+        connectAdjacentCrossroad(b, i, j);
+        connectAdjacentCrossroad(b, i + 1, j);
+        connectAdjacentCrossroad(b, i, j + 1);
+        connectAdjacentCrossroad(b, i + 1, j + 1);
 
-        if (crossRoadGrid[1, 1].GetComponent<Crossroad>().adjacentBuildings == null) { crossRoadGrid[1, 1].GetComponent<Crossroad>().adjacentBuildings = new List<GameObject>(); }
-        crossRoadGrid[1, 1].GetComponent<Crossroad>().adjacentBuildings.Add(b);
-        crossRoadGrid[1, 2].GetComponent<Crossroad>().adjacentBuildings.Add(b);
-        crossRoadGrid[2, 1].GetComponent<Crossroad>().adjacentBuildings.Add(b);
-        crossRoadGrid[2, 2].GetComponent<Crossroad>().adjacentBuildings.Add(b);
+}
+    void connectAdjacentCrossroad(GameObject b, int i, int j)
+    {
+        if (crossRoadGrid[i, j].GetComponent<Crossroad>().adjacentBuildings == null) { crossRoadGrid[1, 1].GetComponent<Crossroad>().adjacentBuildings = new List<GameObject>(); }
+        crossRoadGrid[i, j].GetComponent<Crossroad>().adjacentBuildings.Add(b);
     }
 }
