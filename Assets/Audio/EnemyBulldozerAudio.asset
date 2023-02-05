@@ -15,7 +15,7 @@ MonoBehaviour:
   spawnAudio: {fileID: 8300000, guid: 5a0bb4a03b5a0444eaec23588c9c26a3, type: 3}
   spawnVolume: 0.5
   idleAudio: {fileID: 8300000, guid: f8de5a6c81a79e141baf125c2ce6d77c, type: 3}
-  idleVolume: 0.5
+  idleVolume: 0.3
   attackAudio: {fileID: 8300000, guid: f11324096a8cef040b8bbe4c80995b35, type: 3}
   attackVolume: 0.5
   despawnAudio: {fileID: 8300000, guid: cb24ac52c53669647b06485047855d7e, type: 3}
