@@ -90,6 +90,14 @@ public class Health : MonoBehaviour, IHealth
         this.tickStableHealth = healthConfig.TickStableHealth;
     }
 
+    public void SetHealthByRatio(float ratio)
+    {
+        int calulatedHealth = (int)(ratio * startingHealth);
+        currentHealth = calulatedHealth;
+
+        TreeHealthChanged.Invoke();
+    }
+
     public int getCurrentHealth() { return currentHealth; }
     public int getStartingHealth() { return startingHealth; }
 }
