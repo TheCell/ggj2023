@@ -72,6 +72,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2937913011563058973, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad S
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540243864140231, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad V
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540243867330907, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad U
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468540244194928494, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Crossroad T
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229538599932819011, guid: 4ca00f9df822ace448d85b7a7c6c20fe, type: 3}
+      propertyPath: m_Name
+      value: Building M
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
-      value: Crossroad 2
+      value: Crossroad B
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: adjacentBuildings.Array.size
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
-      value: Crossroad 3
+      value: Crossroad C
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: adjacentBuildings.Array.size
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
-      value: Crossroad 4
+      value: Crossroad D
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: adjacentBuildings.Array.size
@@ -537,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
-      value: Crossroad 1
+      value: Crossroad A
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: treePrefab

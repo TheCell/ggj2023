@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
       propertyPath: m_Name
-      value: Building 4
+      value: Building L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
       propertyPath: m_Name
-      value: Building 1
+      value: Building I
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
       propertyPath: m_Name
-      value: Building 3
+      value: Building K
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
       propertyPath: m_Name
-      value: Building 2
+      value: Building J
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: m_Name
-      value: Crossroad 1
+      value: Crossroad M
       objectReference: {fileID: 0}
     - target: {fileID: 7536853911553629906, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
       propertyPath: treePrefab
