@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1712338b293af2e4a9ef43f582f9c3a4, type: 3}
   m_Name: CrossroadConfig
   m_EditorClassIdentifier: 
-  TreePrefab: {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
+  TreePrefab:
+  - {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
+  - {fileID: 5584138359180494179, guid: c4e8ef75ca427259c8268496ce712d2b, type: 3}
+  - {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
+  - {fileID: 6330080792925558488, guid: 4a3e8c9d6594ed94cb47db78000eef40, type: 3}
   RootPrefab: {fileID: 9127532440645180008, guid: beeeb9e64bac5e147ac5453b93ee89f1, type: 3}
   NewBuildTreshhold: 1

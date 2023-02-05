@@ -15,7 +15,7 @@ public class Crossroad : MonoBehaviour
     private int treePrepStatus = 0;
 
     private int newBuildTreshhold;
-    private GameObject treePrefab;
+    private List<GameObject> treePrefab;
     private GameObject rootPrefab;
 
 
@@ -82,7 +82,7 @@ public class Crossroad : MonoBehaviour
 
     private void PlantTree()
     {
-        treeGameObject = Instantiate(treePrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
+        treeGameObject = Instantiate(treePrefab[0], transform.GetChild(0).position, transform.GetChild(0).rotation);
         treeGameObject.transform.parent = this.transform;
 
         RedrawEverything();
@@ -186,21 +186,44 @@ public class Crossroad : MonoBehaviour
 
     public void ContextMenuAction(ActionUiType type)
     {
+        GameObject newTree;
+        float healthRatio = 1;
+
+        Debug.Log(treeGameObject);
+        if (treeGameObject)
+        {
+            int formerCurrentHealth = treeGameObject.GetComponent<Health>().getCurrentHealth();
+            int formerStartHealth = treeGameObject.GetComponent<Health>().getStartingHealth();
+            healthRatio = 1f * formerCurrentHealth / formerStartHealth;
+        }
+
         // TODO: implement
         switch (type)
         {
             case ActionUiType.Top:
                 Debug.Log("top");
+                newTree = Instantiate(treePrefab[1], transform.GetChild(0).position, transform.GetChild(0).rotation);
                 break;
             case ActionUiType.Right:
                 Debug.Log("right");
-                break;
-            case ActionUiType.Bottom:
-                Debug.Log("bottom");
+                newTree = Instantiate(treePrefab[2], transform.GetChild(0).position, transform.GetChild(0).rotation);
                 break;
             case ActionUiType.Left:
                 Debug.Log("left");
+                newTree = Instantiate(treePrefab[3], transform.GetChild(0).position, transform.GetChild(0).rotation);
+                break;
+            case ActionUiType.Bottom:
+            default:
+                Debug.Log("bottom");
+                newTree = Instantiate(treePrefab[0], transform.GetChild(0).position, transform.GetChild(0).rotation);
                 break;
         }
+
+        DestroyTree();
+        treeGameObject = newTree;
+        treeGameObject.transform.parent = this.transform;
+        treeGameObject.GetComponent<Health>().SetHealthByRatio(healthRatio);
+
+        RedrawEverything();
     }
 }
