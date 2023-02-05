@@ -80,7 +80,10 @@ public class LevelGeneratorGrid : MonoBehaviour
 
 
         // Initiate spawner
-        Instantiate(enemySpawner, new Vector3(-5, 0,-5), Quaternion.identity); 
+        Instantiate(enemySpawner, new Vector3(-5, 0,-5), Quaternion.identity);
+
+
+        Debug.Log("Grid setup finished");
 
     }
 

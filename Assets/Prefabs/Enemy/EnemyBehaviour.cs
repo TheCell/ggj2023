@@ -131,7 +131,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void EnemyDied()
     {
-        Debug.Log("enemy died called in enemy behaviour");
         AudioSource.PlayClipAtPoint(enemyAudio.GetDespawnAudio, this.transform.position, enemyAudio.GetDespawnVolume);
     }
 }
