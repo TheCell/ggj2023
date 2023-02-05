@@ -5,6 +5,7 @@ public class Health : MonoBehaviour, IHealth
 {
     public UnityEvent Died = new();
     public UnityEvent TreeHealthChanged = new();
+    public UnityEvent TreeHealed = new();
 
     [SerializeField] bool ebnableDebugLog;
     [SerializeField] private HealthScriptableObject healthScriptableObject;
@@ -39,6 +40,7 @@ public class Health : MonoBehaviour, IHealth
         }
 
         TreeHealthChanged.Invoke();
+        TreeHealed.Invoke();
     }
 
     void Update()
@@ -92,8 +94,9 @@ public class Health : MonoBehaviour, IHealth
 
     public void SetHealthByRatio(float ratio)
     {
-        int calulatedHealth = (int)(ratio * startingHealth);
-        currentHealth = calulatedHealth;
+        int calulatedHealth = (int)(ratio * this.startingHealth);
+        //Debug.Log(startingHealth);
+        this.currentHealth = calulatedHealth;
 
         TreeHealthChanged.Invoke();
     }

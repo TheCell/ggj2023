@@ -64,6 +64,7 @@ public class TreeBehaviour : MonoBehaviour
         attack.TargetDestroyed.AddListener(GetNextTarget);
         health.Died.AddListener(TreeDied);
         health.TreeHealthChanged.AddListener(HealthChanged);
+        health.TreeHealed.AddListener(Healed);
     }
 
     private void OnDisable()
@@ -71,6 +72,7 @@ public class TreeBehaviour : MonoBehaviour
         health.Died.RemoveListener(TreeDied);
         attack.TargetDestroyed.RemoveListener(GetNextTarget);
         health.TreeHealthChanged.RemoveListener(HealthChanged);
+        health.TreeHealed.RemoveListener(Healed);
     }
 
     void Update()
@@ -80,9 +82,12 @@ public class TreeBehaviour : MonoBehaviour
 
     private void HealthChanged()
     {
-        Debug.Log("health changed called");
-        growthAudioSource.Play();
         tree.SetSize();
+    }
+
+    private void Healed()
+    {
+        growthAudioSource.Play();
     }
 
     private void CheckHasValidTargetOrFindNewAndAttack()
