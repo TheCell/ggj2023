@@ -5,19 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WIP/CodingScene_Jonas2.unity
     guid: 1b03e87fa929260498ebbddfd2abd48f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: 1cda43b2a203afb4abba25d4183a0a57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: cdd4414be9ed8314dac701eb4bbda0e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LooseScene.unity
     guid: 8318a736da64f7e39973ff295d0ad6ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WinScene.unity
     guid: cf630a9d6c65de39b8140d97f1f684b1
+  - enabled: 1
+    path: Assets/Scenes/WIP/CodingScene_Alex.unity
+    guid: 58277adb8e62a654e8f0fedd7d4541af
   m_configObjects: {}
