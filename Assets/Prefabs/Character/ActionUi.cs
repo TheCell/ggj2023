@@ -22,8 +22,11 @@ public class ActionUi : MonoBehaviour
 
     public void Select(GameObject tree)
     {
-        tree.GetComponent<Crossroad>().ContextMenuAction(type);
-        Passivate();
+        if(tree.GetComponent<Crossroad>())
+        {
+            tree.GetComponent<Crossroad>().ContextMenuAction(type);
+            Passivate();
+        }
     }
 
     public void Activate()
