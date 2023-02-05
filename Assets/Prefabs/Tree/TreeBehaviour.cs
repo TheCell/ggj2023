@@ -152,9 +152,11 @@ public class TreeBehaviour : MonoBehaviour
 
     private void TreeDied()
     {
-        audioSource.volume = treeAudio.GetDespawnVolume;
-        audioSource.clip = treeAudio.GetAttackAudio;
-        audioSource.PlayOneShot(audioSource.clip);
+        //audioSource.volume = treeAudio.GetDespawnVolume;
+        //audioSource.clip = treeAudio.GetDespawnAudio;
+        //audioSource.PlayOneShot(audioSource.clip);
+        //acc to unity doc this creates an audio source and disposes it after finishing playing it
+        AudioSource.PlayClipAtPoint(treeAudio.GetDespawnAudio, this.transform.position, treeAudio.GetDespawnVolume);
 
         crossroad.DestroyTree();
     }
