@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e7097746992447926b5029d9ce1b3, type: 3}
   m_Name: EnemyChainsawAudio
   m_EditorClassIdentifier: 
-  spawnAudio2: {fileID: 8300000, guid: f88a66691532c4e47836242fe8fbd198, type: 3}
-  idleAudio2: {fileID: 8300000, guid: d011acd44347b9242838f4e61a02fa3b, type: 3}
-  attackAudio2: {fileID: 8300000, guid: 916f73c1b271a794a9561d9230779fd3, type: 3}
-  despawnAudio2: {fileID: 8300000, guid: e969bb104b4cdb046affcaa6d8f99583, type: 3}
+  spawnAudio: {fileID: 8300000, guid: f88a66691532c4e47836242fe8fbd198, type: 3}
+  spawnVolume: 0.5
+  idleAudio: {fileID: 8300000, guid: d011acd44347b9242838f4e61a02fa3b, type: 3}
+  idleVolume: 1
+  attackAudio: {fileID: 8300000, guid: 916f73c1b271a794a9561d9230779fd3, type: 3}
+  attackVolume: 1
+  despawnAudio: {fileID: 8300000, guid: e969bb104b4cdb046affcaa6d8f99583, type: 3}
+  despawnVolume: 0.5

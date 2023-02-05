@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayAudioLocalSource))]
+[RequireComponent(typeof(AudioSource))]
 public class EnemyBehaviour : MonoBehaviour
 {
     private NavigationAgent agent;
@@ -35,6 +35,7 @@ public class EnemyBehaviour : MonoBehaviour
         if(enemyAudio != null)
         {
             audioSource.clip = enemyAudio.GetSpawnAudio;
+            audioSource.volume = enemyAudio.GetSpawnVolume;
             audioSource.Play();
             //playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
         }
@@ -81,6 +82,7 @@ public class EnemyBehaviour : MonoBehaviour
             attack.SetTarget(target);
             //playAudio.PlayAudioClip(enemyAudio.GetAttackAudio);
             audioSource.clip = enemyAudio.GetAttackAudio;
+            audioSource.volume = enemyAudio.GetAttackVolume;
             audioSource.Play();
         }
         else
@@ -88,6 +90,7 @@ public class EnemyBehaviour : MonoBehaviour
             agent.SetTarget(target.transform);
             //playAudio.PlayAudioClip(enemyAudio.GetIdleAudio);
             audioSource.clip = enemyAudio.GetIdleAudio;
+            audioSource.volume = enemyAudio.GetIdleVolume;
             audioSource.Play();
         }
     }

@@ -5,15 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class SingleAudioClip
 {
-    [SerializeField] private AudioClip audioClip;
+    //[SerializeField] private AudioClip audioClip;
 
-    [SerializeField]
-    [Range(0f, 1f)]
-    private float volume = 1f;
+    //[SerializeField]
+    //[Range(0f, 1f)]
+    //private float volume = 1f;
 
 
-    public AudioClip GetAudioClip { get => audioClip; }
-    public float GetVolume { get => volume; }
+    //public AudioClip GetAudioClip { get => audioClip; }
+    //public float GetVolume { get => volume; }
    
 
 }
