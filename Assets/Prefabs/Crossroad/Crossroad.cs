@@ -186,6 +186,19 @@ public class Crossroad : MonoBehaviour
 
     public void ContextMenuAction(ActionUiType type)
     {
+        if (CheckIfTreePreparable())
+        {
+            treePrepStatus++;
+            if (treePrepStatus >= newBuildTreshhold)
+            {
+                ReplaceTree(type);
+                treePrepStatus = 0;
+            }
+        }
+    }
+
+    private void ReplaceTree(ActionUiType type)
+    { 
         GameObject newTree;
         GameObject prefab;
         float healthRatio = 1;
