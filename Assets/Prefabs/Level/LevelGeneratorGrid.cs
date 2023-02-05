@@ -30,12 +30,16 @@ public class LevelGeneratorGrid : MonoBehaviour
         {
             for (int j = 0; j < fieldSize; j++)
             {
-                Vector3 position = new Vector3 (i * pointDistance, 0, j *pointDistance);
-                Vector3 positionBuilding = new Vector3(i * pointDistance + (pointDistance/2), 0, j * pointDistance + (pointDistance/2));
+                Vector3 position = new Vector3(i * pointDistance, 0.079f, j * pointDistance);
 
                 crossRoadGrid[i, j] = Instantiate(crossroadObject, position, Quaternion.identity);
-
-
+            }
+        }
+        for (int i = 0; i < fieldSize-1; i++)
+        {
+            for (int j = 0; j < fieldSize - 1; j++)
+            {
+                Vector3 positionBuilding = new Vector3(i * pointDistance + (pointDistance / 2), 0, j * pointDistance + (pointDistance / 2));
                 int rand = UnityEngine.Random.Range(0, buildingObjects.Length);
                 bool building = UnityEngine.Random.Range(0, maxDensity) < buildingDensity;
                 int rotation = UnityEngine.Random.Range(0, roationOptions.Length);
@@ -47,8 +51,12 @@ public class LevelGeneratorGrid : MonoBehaviour
             }
         }
 
-
-
+        //Base
+        int center = fieldSize / 2;
+        crossRoadGrid[center, center].GetComponent<Crossroad>().startsWithTree = true;
+        crossRoadGrid[center + 1, center].GetComponent<Crossroad>().startsWithTree = true;
+        crossRoadGrid[center, center + 1].GetComponent<Crossroad>().startsWithTree = true;
+        crossRoadGrid[center + 1, center + 1].GetComponent<Crossroad>().startsWithTree = true;
     }
 
     // Update is called once per frame
