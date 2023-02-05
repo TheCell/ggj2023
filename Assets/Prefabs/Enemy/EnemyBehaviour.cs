@@ -5,6 +5,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private NavigationAgent agent;
     private Attack attack;
+    private Health health;
 
     private PlayAudioLocalSource playAudio;
     [SerializeField] private SOAudioCollection enemyAudio;
@@ -28,28 +29,36 @@ public class EnemyBehaviour : MonoBehaviour
             Debug.LogError("Attack not present");
         }
 
-        agent.StoppedMoving.AddListener(StoppedMoving);
-        attack.TargetDestroyed.AddListener(GetNextTarget);
-        GetNextTarget();
+        health = GetComponent<Health>();
+        if (health == null)
+        {
+            Debug.LogError("Health not present");
+        }
 
-        if(enemyAudio != null)
+        if (enemyAudio != null)
         {
             audioSource.clip = enemyAudio.GetSpawnAudio;
             audioSource.volume = enemyAudio.GetSpawnVolume;
             audioSource.Play();
-            //playAudio.PlayAudioClip(enemyAudio.GetSpawnAudio);
         }
-
         else
         {
             Debug.LogError("Missing SO with audio information in Enemy Behaviour");
         }
+
+        health.Died.AddListener(EnemyDied);
+        agent.StoppedMoving.AddListener(StoppedMoving);
+        attack.TargetDestroyed.AddListener(GetNextTarget);
+        GetNextTarget();
+        
+        
     }
 
     private void OnDisable()
     {
         agent.StoppedMoving.RemoveListener(StoppedMoving);
         attack.TargetDestroyed.RemoveListener(GetNextTarget);
+        health.Died.RemoveListener(EnemyDied);
     }
 
     void Update()
@@ -118,5 +127,11 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         return targetGameObject;
+    }
+
+    private void EnemyDied()
+    {
+        Debug.Log("enemy died called in enemy behaviour");
+        AudioSource.PlayClipAtPoint(enemyAudio.GetDespawnAudio, this.transform.position, enemyAudio.GetDespawnVolume);
     }
 }
