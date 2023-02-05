@@ -85,6 +85,9 @@ MonoBehaviour:
   TreeHealthChanged:
     m_PersistentCalls:
       m_Calls: []
+  TreeHealed:
+    m_PersistentCalls:
+      m_Calls: []
   ebnableDebugLog: 0
   healthScriptableObject: {fileID: 11400000, guid: 426fa41f507ebb44b8db25feffbde588, type: 2}
 --- !u!114 &5628349841927338139
