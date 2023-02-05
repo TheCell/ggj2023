@@ -48,7 +48,6 @@ public class NavigationAgent : MonoBehaviour
         if (remainingDist <= agent.stoppingDistance)
         {
             StopMoving();
-            StoppedMoving.Invoke();
         }
     }
 
@@ -62,6 +61,7 @@ public class NavigationAgent : MonoBehaviour
     private void StopMoving()
     {
         agent.isStopped = true;
+        StoppedMoving.Invoke();
     }
 
     private void ApplyNavigationConfig(NavigationConfig config)
