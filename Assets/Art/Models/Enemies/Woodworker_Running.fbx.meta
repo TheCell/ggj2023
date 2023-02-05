@@ -3,7 +3,42 @@ guid: 4d9990694e5c940fd80aadd2d50bed6d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chainsaw_Main
+    second: {fileID: 2100000, guid: 9e9f8db44aed942c3819979ea8d4d756, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chainsaw_Metal
+    second: {fileID: 2100000, guid: 9e9f8db44aed942c3819979ea8d4d756, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chainsaw_Secondary
+    second: {fileID: 2100000, guid: 57084c1771eae4ff99467c219ffcc879, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woodworker_Base
+    second: {fileID: 2100000, guid: abe1cafbe394b4fe9a9e80b4f7601330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woodworker_Dark
+    second: {fileID: 2100000, guid: c39ed7d77f2bd422296b60c9327921e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woodworker_Jeans
+    second: {fileID: 2100000, guid: b062809f3b0664b78990eea6428e618e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woodworker_Skin
+    second: {fileID: 2100000, guid: 53967c13b25ed461eab2fac22d8d8f24, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
