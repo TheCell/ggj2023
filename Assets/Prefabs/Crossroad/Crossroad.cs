@@ -8,7 +8,7 @@ public class Crossroad : MonoBehaviour
     [SerializeField] private CrossroadScriptableObject crossroadScriptableObject;
     [SerializeField] private List<GameObject> connectedCrossroads = new List<GameObject>();
     [SerializeField] private List<GameObject> adjacentBuildings = new List<GameObject>();
-    [SerializeField] private bool startsWithTree;
+    [SerializeField] public bool startsWithTree;
 
     private GameObject treeGameObject;
     private List<GameObject> rootGameObjects = new List<GameObject>();
