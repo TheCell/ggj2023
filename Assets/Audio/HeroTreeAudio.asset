@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: HeroTreeAudio
   m_EditorClassIdentifier: 
   spawnAudio: {fileID: 8300000, guid: 9929355af951f46489d5a9888c74c3a8, type: 3}
-  spawnVolume: 1
+  spawnVolume: 0.5
   idleAudio: {fileID: 0}
-  idleVolume: 1
+  idleVolume: 0.5
   attackAudio: {fileID: 8300000, guid: 80d53c04c0ce65647acc2ed56443dc1b, type: 3}
-  attackVolume: 1
+  attackVolume: 0.5
   despawnAudio: {fileID: 8300000, guid: 2a2fb28c376e1de4eb43b611e66dd5c4, type: 3}
   despawnVolume: 1
