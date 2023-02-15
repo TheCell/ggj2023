@@ -34,6 +34,18 @@ public class TapAction : MonoBehaviour
                     this.GetComponent<Crossroad>().PrepareTree();
                 }
             }
+            else if (GetComponent<CrossroadGrowth>())
+            {
+                if (this.GetComponent<CrossroadGrowth>().HasTree())
+                {
+                    this.GetComponentInChildren<Health>().Heal(healAmount);
+                    this.GetComponentInChildren<Tree>().SetSize();
+                }
+                else
+                {
+                    this.GetComponent<CrossroadGrowth>().PrepareTree();
+                }
+            }
 
             cooldown = true;
             StartCoroutine(ResetCooldown());

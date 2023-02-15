@@ -27,6 +27,11 @@ public class ActionUi : MonoBehaviour
             tree.GetComponent<Crossroad>().ContextMenuAction(type);
             Passivate();
         }
+        else if (tree.GetComponent<CrossroadGrowth>())
+        {
+            tree.GetComponent<CrossroadGrowth>().ContextMenuAction(type);
+            Passivate();
+        }
     }
 
     public void Activate()

@@ -10,12 +10,13 @@ public class LevelGeneratorGrid : MonoBehaviour
     public GameObject monumentObject;
     public int fieldSize;
     public GameObject enemySpawner;
-    public int enemySpawners; // between 1 and 4
+    public int enemySpawnerPoints; // between 1 and 4
 
     private int maxDensity = 100;
     private int[] roationOptions = { 0, 90, 180, 270 };
     private GameObject[,] crossRoadGrid;
-    private List<GameObject> buildings;
+    private List<GameObject> buildings = new List<GameObject>();
+    private List<GameObject> enemySpawners = new List<GameObject>();
 
     // Positioning Variables
     private int startGrid = 20;
@@ -28,6 +29,10 @@ public class LevelGeneratorGrid : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+    {
+        Setup();
+    }
+    private void Setup()
     {
         SetupBaseVariables();
         //GameObject start = GameObject.Find("NavMeshSceneGeometry");
@@ -43,11 +48,13 @@ public class LevelGeneratorGrid : MonoBehaviour
         currentBuildingAssetNullpointCorrection = pointDistance / 2 + 0.6f;
         enemyStartPoint = startGrid - EnemySpawnerDistanceToGridCorner;
         enemyStartPointCorner = startGrid + fieldSize * pointDistance + EnemySpawnerDistanceToGridCorner;
-    }
+        crossRoadGrid = new GameObject[fieldSize, fieldSize];
+        buildings = new List<GameObject>();
+        enemySpawners = new List<GameObject>();
+}
 
     private void BuildCrossroadGrid()
     {
-        crossRoadGrid = new GameObject[fieldSize, fieldSize];
         for (int i = 0; i < fieldSize; i++)
         {
             for (int j = 0; j < fieldSize; j++)
@@ -79,7 +86,6 @@ public class LevelGeneratorGrid : MonoBehaviour
     }
     private void AddBuildingsAndMonument()
     {
-        buildings = new List<GameObject>();
         for (int i = 0; i < fieldSize - 1; i++)
         {
             for (int j = 0; j < fieldSize - 1; j++)
@@ -127,16 +133,20 @@ public class LevelGeneratorGrid : MonoBehaviour
 
     private void InstantiateEnemySources()
     {
-        Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPoint), Quaternion.identity);
-        if (enemySpawners > 1)
+        GameObject spawner = Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPoint), Quaternion.identity);
+        enemySpawners.Add(spawner);
+        if (enemySpawnerPoints > 1)
         {
-            Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPointCorner), Quaternion.identity);
-            if (enemySpawners > 2)
+            spawner = Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPointCorner), Quaternion.identity);
+            enemySpawners.Add(spawner);
+            if (enemySpawnerPoints > 2)
             {
-                Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPointCorner), Quaternion.identity);
-                if (enemySpawners > 3)
+                spawner = Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPointCorner), Quaternion.identity);
+                enemySpawners.Add(spawner);
+                if (enemySpawnerPoints > 3)
                 {
-                    Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPoint), Quaternion.identity);
+                    spawner = Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPoint), Quaternion.identity);
+                    enemySpawners.Add(spawner);
                 }
             }
         }
@@ -145,6 +155,10 @@ public class LevelGeneratorGrid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (crossRoadGrid[0,0] == null)
+        {
+            Setup();
+        }
         foreach (GameObject b in buildings)
         {
             BuildingGrowth script = (BuildingGrowth)b.GetComponent(typeof(BuildingGrowth));
@@ -154,27 +168,39 @@ public class LevelGeneratorGrid : MonoBehaviour
                 WinGame();
             }
         }
-        CheckIfGameLost();
-    }
-
-    private void WinGame()
-    {
-        Debug.Log("You won!");
-        GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
-        sceneSwitcher.SwitchToWinScene();
-    }
-    private IEnumerator CheckIfGameLost()
-    {
-        yield return new WaitForEndOfFrame();
         if (GameObject.FindGameObjectsWithTag("Tree").Length == 0)
         {
             LoseGame();
         }
     }
+
+    private void WinGame()
+    {
+        Debug.Log("You won!");
+        CleanupBoard();
+        GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
+        sceneSwitcher.SwitchToWinScene();
+    }
     private void LoseGame()
     {
         Debug.Log("You lost!");
+        CleanupBoard();
         GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
         sceneSwitcher.SwitchToLooseScene();
+    }
+    private void CleanupBoard()
+    {
+        foreach (GameObject obj in crossRoadGrid) {
+            Destroy(obj);
+        }
+        foreach (GameObject obj in buildings)
+        {
+            Destroy(obj);
+        }
+        foreach (GameObject obj in enemySpawners)
+        {
+            Destroy(obj);
+        }
+        SetupBaseVariables();
     }
 }
