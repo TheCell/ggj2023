@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.XR;
 
 public class LevelGeneratorGrid : MonoBehaviour
 {
@@ -17,14 +14,22 @@ public class LevelGeneratorGrid : MonoBehaviour
 
     private int maxDensity = 100;
     private int[] roationOptions = { 0, 90, 180, 270 };
-    private int pointDistance = 5;
     private GameObject[,] crossRoadGrid;
     private List<GameObject> buildings;
+
+    // Positioning Variables
+    private int startGrid = 20;
     private int monumentPosition = 1;
+    private int pointDistance = 5;
+    private int EnemySpawnerDistanceToGridCorner = 4;
+    private float currentBuildingAssetNullpointCorrection;
+    private int enemyStartPoint;
+    private int enemyStartPointCorner;
 
     // Start is called before the first frame update
     void Start()
     {
+        SetupBaseVariables();
         //GameObject start = GameObject.Find("NavMeshSceneGeometry");
         //GameObject ground = GameObject.Find("Ground");
         //ground.gameObject.transform.localScale += new Vector3((fieldSize * pointDistance), 0, (fieldSize * pointDistance));
@@ -32,6 +37,12 @@ public class LevelGeneratorGrid : MonoBehaviour
         AddBuildingsAndMonument();
         PlantTreesAtCenter();
         InstantiateEnemySources();
+    }
+    private void SetupBaseVariables()
+    {
+        currentBuildingAssetNullpointCorrection = pointDistance / 2 + 0.6f;
+        enemyStartPoint = startGrid - EnemySpawnerDistanceToGridCorner;
+        enemyStartPointCorner = startGrid + fieldSize * pointDistance + EnemySpawnerDistanceToGridCorner;
     }
 
     private void BuildCrossroadGrid()
@@ -41,7 +52,7 @@ public class LevelGeneratorGrid : MonoBehaviour
         {
             for (int j = 0; j < fieldSize; j++)
             {
-                Vector3 position = new Vector3(i * pointDistance, 0.079f, j * pointDistance);
+                Vector3 position = new Vector3(startGrid + i * pointDistance, 0.079f, startGrid + j * pointDistance);
 
                 crossRoadGrid[i, j] = Instantiate(crossroadObject, position, Quaternion.identity);
 
@@ -91,7 +102,7 @@ public class LevelGeneratorGrid : MonoBehaviour
     }
     private GameObject AddBuilding(GameObject building, int i, int j)
     {
-        Vector3 positionBuilding = new Vector3(i * pointDistance + ((pointDistance / 2) + 0.5f), 0, j * pointDistance + ((pointDistance / 2) + 0.5f));
+        Vector3 positionBuilding = new Vector3(startGrid + i * pointDistance + currentBuildingAssetNullpointCorrection, 0, startGrid + j * pointDistance + currentBuildingAssetNullpointCorrection);
         int rotation = UnityEngine.Random.Range(0, roationOptions.Length);
         GameObject b = Instantiate(building, positionBuilding, Quaternion.Euler(new Vector3(0, roationOptions[rotation], 0)));
         ConnectAdjacentCrossroadsToBuilding(b, i, j);
@@ -116,18 +127,16 @@ public class LevelGeneratorGrid : MonoBehaviour
 
     private void InstantiateEnemySources()
     {
-        int fieldBorderStart = -4;
-        Instantiate(enemySpawner, new Vector3(fieldBorderStart, 0, fieldBorderStart), Quaternion.identity);
+        Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPoint), Quaternion.identity);
         if (enemySpawners > 1)
         {
-            int fieldBorderDistance = fieldSize * pointDistance + 4;
-            Instantiate(enemySpawner, new Vector3(fieldBorderDistance, 0, fieldBorderDistance), Quaternion.identity);
+            Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPointCorner), Quaternion.identity);
             if (enemySpawners > 2)
             {
-                Instantiate(enemySpawner, new Vector3(fieldBorderStart, 0, fieldBorderDistance), Quaternion.identity);
+                Instantiate(enemySpawner, new Vector3(enemyStartPoint, 0, enemyStartPointCorner), Quaternion.identity);
                 if (enemySpawners > 3)
                 {
-                    Instantiate(enemySpawner, new Vector3(fieldBorderDistance, 0, fieldBorderStart), Quaternion.identity);
+                    Instantiate(enemySpawner, new Vector3(enemyStartPointCorner, 0, enemyStartPoint), Quaternion.identity);
                 }
             }
         }
