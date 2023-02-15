@@ -430,11 +430,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingObjects:
-  - {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
+  - {fileID: 5006230733703287429, guid: cda7636da6e9d2f4d9a70724501095a0, type: 3}
+  - {fileID: 5006230733703287429, guid: 3df78c64fefe3c04183e98f91fe53f44, type: 3}
+  - {fileID: 5006230733703287429, guid: 5d2c57e7364d4984189d61617be78486, type: 3}
   buildingDensity: 8
-  treeObject: {fileID: 919132149155446097, guid: ac9be0f639f4c93489a4fb20c9d829bf, type: 3}
-  crossroadObject: {fileID: 6090946834034724175, guid: 6efe03bd0c6004b4db13d31f2be6be0b, type: 3}
-  monumentObject: {fileID: 4734249570170172219, guid: d3e3ad783c4f3e149ac10fb56ac03b8f, type: 3}
+  crossroadObject: {fileID: 6090946834034724175, guid: 085166c14e9ddff40b2886cb1826f643, type: 3}
+  monumentObject: {fileID: 5006230733703287429, guid: 730185e3144251440ba29c2948bcadbf, type: 3}
   fieldSize: 10
   enemySpawner: {fileID: 9000024512121652937, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
 --- !u!1001 &1414344846

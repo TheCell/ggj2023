@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +13,10 @@ public class BuildingGrowth : MonoBehaviour
     private void OnEnable()
     {
         building = gameObject;
-        overgrowth = building.GetComponentInChildren<Overgrowth>();
         building.SetActive(true);
+        overgrowth = building.GetComponentInChildren<Overgrowth>();
+        Console.WriteLine("Building overgrowth?");
+        Console.WriteLine(overgrowth);
         overgrowth.transform.localScale = Vector3.zero;
     }
 
@@ -21,12 +24,12 @@ public class BuildingGrowth : MonoBehaviour
     {
         foreach (GameObject crossroad in surroundingCrossroads)
         {
-            crossroad.GetComponent<Crossroad>().EnsureBuildingConnectionBothWays(this.gameObject);
+            crossroad.GetComponent<CrossroadGrowth>().EnsureBuildingConnectionBothWays(this.gameObject);
         }
         RedrawBuilding();
     }
 
-    private void EnsureBuildingConnectionBothWays(GameObject otherGameobject)
+    public void EnsureBuildingConnectionBothWays(GameObject otherGameobject)
     {
         if (!surroundingCrossroads.Contains(otherGameobject))
         {
@@ -36,9 +39,9 @@ public class BuildingGrowth : MonoBehaviour
 
     public void RedrawBuilding()
     {
-        if (shouldBeOvergrown() != isOvergrown())
+        if (ShouldBeOvergrown() != IsOvergrown())
         {
-            if (shouldBeOvergrown())
+            if (ShouldBeOvergrown())
             {
                 overgrowth.transform.localScale = Vector3.one;
                 //Audio
@@ -51,11 +54,11 @@ public class BuildingGrowth : MonoBehaviour
         }
     }
 
-    public bool shouldBeOvergrown()
+    public bool ShouldBeOvergrown()
     {
         foreach (GameObject crossroad in surroundingCrossroads)
         {
-            if(!crossroad.GetComponent<Crossroad>().HasTree())
+            if(!crossroad.GetComponent<CrossroadGrowth>().HasTree())
             {
                 return false;
             }
@@ -63,7 +66,7 @@ public class BuildingGrowth : MonoBehaviour
         return true;
     }
 
-    public bool isOvergrown()
+    public bool IsOvergrown()
     {
         return overgrowth.transform.localScale == Vector3.one;
     }

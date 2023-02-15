@@ -74,7 +74,13 @@ public class Health : MonoBehaviour, IHealth
         if (GetComponent<Tree>())
         {
             tickFloor /= 2;
-            tickFloor *= transform.parent.GetComponent<Crossroad>().ConnectedTreesAmount();
+            if (transform.parent.GetComponent<Crossroad>())
+            {
+                tickFloor *= transform.parent.GetComponent<Crossroad>().ConnectedTreesAmount();
+            } else
+            {
+                tickFloor *= transform.parent.GetComponent<CrossroadGrowth>().ConnectedTreesAmount();
+            }
         }
 
         if (currentHealth >= tickStableHealth + tickFloor)

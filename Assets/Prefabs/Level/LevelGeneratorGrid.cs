@@ -43,11 +43,12 @@ public class LevelGeneratorGrid : MonoBehaviour
         {
             BuildingGrowth script = (BuildingGrowth) b.GetComponent(typeof(BuildingGrowth));
             script.RedrawBuilding();
-            if (script.isOvergrown() && script.isMonument)
+            if (script.IsOvergrown() && script.isMonument)
             {
                 winGame();
             }
         }
+        CheckIfGameLost();
     }
 
     void connectAdjacentCrossroadsToBuilding(GameObject b, int i, int j)
@@ -78,17 +79,17 @@ public class LevelGeneratorGrid : MonoBehaviour
                 {
                     bros.Add(crossRoadGrid[i, j - 1]);
                 }
-                crossRoadGrid[i, j].GetComponent<Crossroad>().connectedCrossroads = bros;
+                crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().connectedCrossroads = bros;
             }
         }
     }
     private void PlantTreesAtCenter()
     {
         int center = (fieldSize / 2) - 1;
-        crossRoadGrid[center, center].GetComponent<Crossroad>().startsWithTree = true;
-        crossRoadGrid[center + 1, center].GetComponent<Crossroad>().startsWithTree = true;
-        crossRoadGrid[center, center + 1].GetComponent<Crossroad>().startsWithTree = true;
-        crossRoadGrid[center + 1, center + 1].GetComponent<Crossroad>().startsWithTree = true;
+        crossRoadGrid[center, center].GetComponent<CrossroadGrowth>().startsWithTree = true;
+        crossRoadGrid[center + 1, center].GetComponent<CrossroadGrowth>().startsWithTree = true;
+        crossRoadGrid[center, center + 1].GetComponent<CrossroadGrowth>().startsWithTree = true;
+        crossRoadGrid[center + 1, center + 1].GetComponent<CrossroadGrowth>().startsWithTree = true;
     }
     private void AddBuildingsAndMonument()
     {
@@ -115,10 +116,10 @@ public class LevelGeneratorGrid : MonoBehaviour
     }
     private void connectAdjacentCrossroad(GameObject b, int i, int j)
     {
-        if (crossRoadGrid[i, j].GetComponent<Crossroad>().adjacentBuildings == null) { 
-            crossRoadGrid[1, 1].GetComponent<Crossroad>().adjacentBuildings = new List<GameObject>();
+        if (crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().adjacentBuildings == null) { 
+            crossRoadGrid[1, 1].GetComponent<CrossroadGrowth>().adjacentBuildings = new List<GameObject>();
         }
-        crossRoadGrid[i, j].GetComponent<Crossroad>().adjacentBuildings.Add(b);
+        crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().adjacentBuildings.Add(b);
     }
     private void winGame()
     {
@@ -126,11 +127,26 @@ public class LevelGeneratorGrid : MonoBehaviour
         GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
         sceneSwitcher.SwitchToWinScene();
     }
+    private IEnumerator CheckIfGameLost()
+    {
+        yield return new WaitForEndOfFrame();
+        if (GameObject.FindGameObjectsWithTag("Tree").Length == 0)
+        {
+            LoseGame();
+        }
+    }
+    private void LoseGame()
+    {
+        Debug.Log("You lost!");
+        GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
+        sceneSwitcher.SwitchToLooseScene();
+    }
     private GameObject addBuilding(GameObject building, int i, int j)
     {
-        Vector3 positionBuilding = new Vector3(i * pointDistance + (pointDistance / 2), 0, j * pointDistance + (pointDistance / 2));
+        Vector3 positionBuilding = new Vector3(i * pointDistance + ((pointDistance / 2) + 0.5f), 0, j * pointDistance + ((pointDistance / 2) + 0.5f));
         int rotation = UnityEngine.Random.Range(0, roationOptions.Length);
         GameObject b = Instantiate(building, positionBuilding, Quaternion.Euler(new Vector3(0, roationOptions[rotation], 0)));
+        // b.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         connectAdjacentCrossroadsToBuilding(b, i, j);
         buildings.Add(b);
         return b;

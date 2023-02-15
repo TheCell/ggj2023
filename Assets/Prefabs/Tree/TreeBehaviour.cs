@@ -9,6 +9,7 @@ public class TreeBehaviour : MonoBehaviour
     private Attack attack;
     private Health health;
     private Crossroad crossroad;
+    private CrossroadGrowth crossroadGrowth;
 
     private bool isAttacking = false;
 
@@ -40,7 +41,11 @@ public class TreeBehaviour : MonoBehaviour
         crossroad = GetComponentInParent<Crossroad>();
         if (crossroad == null)
         {
-            Debug.LogError("Crossroad not present on Parent");
+            crossroadGrowth = GetComponentInParent<CrossroadGrowth>();
+            if (crossroadGrowth == null)
+            {
+                Debug.LogError("Crossroad not present on Parent");
+            }
         }
 
         if (treeAudio != null)
@@ -158,7 +163,14 @@ public class TreeBehaviour : MonoBehaviour
         //acc to unity doc this creates an audio source and disposes it after finishing playing it
         AudioSource.PlayClipAtPoint(treeAudio.GetDespawnAudio, this.transform.position, treeAudio.GetDespawnVolume);
 
-        crossroad.DestroyTree();
+        if (crossroad != null)
+        {
+            crossroad.DestroyTree();
+        }
+        else
+        {
+            crossroadGrowth.DestroyTree();
+        }
     }
 
     private Health FindTarget()
