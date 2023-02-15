@@ -433,11 +433,12 @@ MonoBehaviour:
   - {fileID: 5006230733703287429, guid: cda7636da6e9d2f4d9a70724501095a0, type: 3}
   - {fileID: 5006230733703287429, guid: 3df78c64fefe3c04183e98f91fe53f44, type: 3}
   - {fileID: 5006230733703287429, guid: 5d2c57e7364d4984189d61617be78486, type: 3}
-  buildingDensity: 8
+  buildingDensity: 50
   crossroadObject: {fileID: 6090946834034724175, guid: 085166c14e9ddff40b2886cb1826f643, type: 3}
   monumentObject: {fileID: 5006230733703287429, guid: 730185e3144251440ba29c2948bcadbf, type: 3}
   fieldSize: 10
   enemySpawner: {fileID: 9000024512121652937, guid: ce402ebcfa7b6bb4b901cf5452ddddc9, type: 3}
+  enemySpawners: 2
 --- !u!1001 &1414344846
 PrefabInstance:
   m_ObjectHideFlags: 0

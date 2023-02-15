@@ -7,15 +7,14 @@ using UnityEngine.XR;
 
 public class LevelGeneratorGrid : MonoBehaviour
 {
-
     public GameObject[] buildingObjects;
     public int buildingDensity; // between 1 and 100 (maxDensity)
-    // public GameObject treeObject;
     public GameObject crossroadObject;
     public GameObject monumentObject;
     public int fieldSize;
     public GameObject enemySpawner;
-    
+    public int enemySpawners; // between 1 and 4
+
     private int maxDensity = 100;
     private int[] roationOptions = { 0, 90, 180, 270 };
     private int pointDistance = 5;
@@ -32,34 +31,10 @@ public class LevelGeneratorGrid : MonoBehaviour
         BuildCrossroadGrid();
         AddBuildingsAndMonument();
         PlantTreesAtCenter();
-
-        Instantiate(enemySpawner, new Vector3(-4, 0,-4), Quaternion.identity);
+        InstantiateEnemySources();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        foreach (GameObject b in buildings)
-        {
-            BuildingGrowth script = (BuildingGrowth) b.GetComponent(typeof(BuildingGrowth));
-            script.RedrawBuilding();
-            if (script.IsOvergrown() && script.isMonument)
-            {
-                winGame();
-            }
-        }
-        CheckIfGameLost();
-    }
-
-    void connectAdjacentCrossroadsToBuilding(GameObject b, int i, int j)
-    {
-        connectAdjacentCrossroad(b, i, j);
-        connectAdjacentCrossroad(b, i + 1, j);
-        connectAdjacentCrossroad(b, i, j + 1);
-        connectAdjacentCrossroad(b, i + 1, j + 1);
-    }
-
-    void BuildCrossroadGrid()
+    private void BuildCrossroadGrid()
     {
         crossRoadGrid = new GameObject[fieldSize, fieldSize];
         for (int i = 0; i < fieldSize; i++)
@@ -103,25 +78,77 @@ public class LevelGeneratorGrid : MonoBehaviour
 
                 if (i == monumentPosition && j == monumentPosition)
                 {
-                    GameObject b = addBuilding(monumentObject, i, j);
+                    GameObject b = AddBuilding(monumentObject, i, j);
                     BuildingGrowth script = (BuildingGrowth)b.GetComponent(typeof(BuildingGrowth));
                     script.isMonument = true;
                 }
                 else if (build)
                 {
-                    GameObject b = addBuilding(buildingObjects[rand], i, j);
+                    GameObject b = AddBuilding(buildingObjects[rand], i, j);
                 }
             }
         }
     }
-    private void connectAdjacentCrossroad(GameObject b, int i, int j)
+    private GameObject AddBuilding(GameObject building, int i, int j)
     {
-        if (crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().adjacentBuildings == null) { 
+        Vector3 positionBuilding = new Vector3(i * pointDistance + ((pointDistance / 2) + 0.5f), 0, j * pointDistance + ((pointDistance / 2) + 0.5f));
+        int rotation = UnityEngine.Random.Range(0, roationOptions.Length);
+        GameObject b = Instantiate(building, positionBuilding, Quaternion.Euler(new Vector3(0, roationOptions[rotation], 0)));
+        ConnectAdjacentCrossroadsToBuilding(b, i, j);
+        buildings.Add(b);
+        return b;
+    }
+    private void ConnectAdjacentCrossroadsToBuilding(GameObject b, int i, int j)
+    {
+        AddBuildingToListInCrossroad(b, i, j);
+        AddBuildingToListInCrossroad(b, i + 1, j);
+        AddBuildingToListInCrossroad(b, i, j + 1);
+        AddBuildingToListInCrossroad(b, i + 1, j + 1);
+    }
+    private void AddBuildingToListInCrossroad(GameObject b, int i, int j)
+    {
+        if (crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().adjacentBuildings == null)
+        {
             crossRoadGrid[1, 1].GetComponent<CrossroadGrowth>().adjacentBuildings = new List<GameObject>();
         }
         crossRoadGrid[i, j].GetComponent<CrossroadGrowth>().adjacentBuildings.Add(b);
     }
-    private void winGame()
+
+    private void InstantiateEnemySources()
+    {
+        int fieldBorderStart = -4;
+        Instantiate(enemySpawner, new Vector3(fieldBorderStart, 0, fieldBorderStart), Quaternion.identity);
+        if (enemySpawners > 1)
+        {
+            int fieldBorderDistance = fieldSize * pointDistance + 4;
+            Instantiate(enemySpawner, new Vector3(fieldBorderDistance, 0, fieldBorderDistance), Quaternion.identity);
+            if (enemySpawners > 2)
+            {
+                Instantiate(enemySpawner, new Vector3(fieldBorderStart, 0, fieldBorderDistance), Quaternion.identity);
+                if (enemySpawners > 3)
+                {
+                    Instantiate(enemySpawner, new Vector3(fieldBorderDistance, 0, fieldBorderStart), Quaternion.identity);
+                }
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        foreach (GameObject b in buildings)
+        {
+            BuildingGrowth script = (BuildingGrowth)b.GetComponent(typeof(BuildingGrowth));
+            script.RedrawBuilding();
+            if (script.IsOvergrown() && script.isMonument)
+            {
+                WinGame();
+            }
+        }
+        CheckIfGameLost();
+    }
+
+    private void WinGame()
     {
         Debug.Log("You won!");
         GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
@@ -140,15 +167,5 @@ public class LevelGeneratorGrid : MonoBehaviour
         Debug.Log("You lost!");
         GameSceneSwitcher sceneSwitcher = gameObject.AddComponent<GameSceneSwitcher>();
         sceneSwitcher.SwitchToLooseScene();
-    }
-    private GameObject addBuilding(GameObject building, int i, int j)
-    {
-        Vector3 positionBuilding = new Vector3(i * pointDistance + ((pointDistance / 2) + 0.5f), 0, j * pointDistance + ((pointDistance / 2) + 0.5f));
-        int rotation = UnityEngine.Random.Range(0, roationOptions.Length);
-        GameObject b = Instantiate(building, positionBuilding, Quaternion.Euler(new Vector3(0, roationOptions[rotation], 0)));
-        // b.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        connectAdjacentCrossroadsToBuilding(b, i, j);
-        buildings.Add(b);
-        return b;
     }
 }
